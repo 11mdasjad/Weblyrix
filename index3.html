@@ -1592,6 +1592,7 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script>
         window.addEventListener('scroll', () => {
             document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
@@ -1627,10 +1628,45 @@
         }, { threshold: 0.5 });
         document.querySelectorAll('.stat-number').forEach(counter => counterObserver.observe(counter));
 
-        document.getElementById('contactForm').addEventListener('submit', (e) => {
+        document.getElementById('contactForm').addEventListener('submit', async (e) => {
             e.preventDefault();
-            alert('Thank you for your message! We will get back to you soon.');
-            e.target.reset();
+            
+            const submitBtn = e.target.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = 'Sending...';
+            submitBtn.disabled = true;
+
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                service: document.getElementById('service').value,
+                message: document.getElementById('message').value
+            };
+
+            try {
+                const supabaseClient = supabase.createClient(
+                    'https://osdlisapralwweyjvxhw.supabase.co', 
+                    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9zZGxpc2FwcmFsd3dleWp2eGh3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ3OTU0NjIsImV4cCI6MjA5MDM3MTQ2Mn0.a-p1X_LNE10eqTpZ7EcMtvhFjOI9ZHYPgWjekK75p-I'
+                );
+
+                const { data, error } = await supabaseClient
+                    .from('contacts')
+                    .insert([formData]);
+
+                if (!error) {
+                    alert('Thank you for your message! We will get back to you soon.');
+                    e.target.reset();
+                } else {
+                    console.error('Supabase error:', error);
+                    alert('Error: ' + error.message);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred while sending your message. Please try again later.');
+            } finally {
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }
         });
 
         // 3D tilt effect on cards

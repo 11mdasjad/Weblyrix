@@ -2218,39 +2218,73 @@
 
         counters.forEach(counter => counterObserver.observe(counter));
 
-        // Contact form opens normal SMS compose to your number with filled details.
+        // Form submission
         const contactForm = document.getElementById('contactForm');
         const formAlert = document.getElementById('formAlert');
-        const smsNumber = '919905757447';
 
         if (contactForm) {
-            contactForm.addEventListener('submit', (event) => {
+            contactForm.addEventListener('submit', async (event) => {
                 event.preventDefault();
 
-                const data = new FormData(contactForm);
-                const name = (data.get('name') || '').toString().trim();
-                const email = (data.get('email') || '').toString().trim();
-                const service = (data.get('service') || '').toString().trim();
-                const message = (data.get('message') || '').toString().trim();
+                const submitBtn = event.target.querySelector('button[type="submit"]');
+                const originalText = submitBtn.innerHTML;
+                submitBtn.innerHTML = 'Sending...';
+                if(submitBtn) submitBtn.disabled = true;
 
-                const smsBody = [
-                    'New inquiry from Weblyrix website',
-                    `Name: ${name}`,
-                    `Email: ${email}`,
-                    `Service: ${service}`,
-                    `Message: ${message}`
-                ].join('\n');
+                const formData = {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    service: document.getElementById('service').value,
+                    message: document.getElementById('message').value
+                };
 
-                const smsUrl = `sms:${smsNumber}?body=${encodeURIComponent(smsBody)}`;
-                window.location.href = smsUrl;
+                try {
+                    const supabaseClient = supabase.createClient(
+                        'https://osdlisapralwweyjvxhw.supabase.co', 
+                        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9zZGxpc2FwcmFsd3dleWp2eGh3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ3OTU0NjIsImV4cCI6MjA5MDM3MTQ2Mn0.a-p1X_LNE10eqTpZ7EcMtvhFjOI9ZHYPgWjekK75p-I'
+                    );
 
-                if (formAlert) {
-                    formAlert.classList.remove('error');
-                    formAlert.classList.add('success');
-                    formAlert.textContent = 'Opening SMS app to send message to +91 99057 57447.';
+                    const { data, error } = await supabaseClient
+                        .from('contacts')
+                        .insert([formData]);
+
+                    if (!error) {
+                        if (formAlert) {
+                            formAlert.classList.remove('error');
+                            formAlert.classList.add('success');
+                            formAlert.textContent = 'Thank you for your message! We will get back to you soon.';
+                        } else {
+                            alert('Thank you for your message! We will get back to you soon.');
+                        }
+                        event.target.reset();
+                    } else {
+                        console.error('Supabase error:', error);
+                        if (formAlert) {
+                            formAlert.classList.remove('success');
+                            formAlert.classList.add('error');
+                            formAlert.textContent = 'Error: ' + error.message;
+                        } else {
+                            alert('Error: ' + error.message);
+                        }
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                    if (formAlert) {
+                        formAlert.classList.remove('success');
+                        formAlert.classList.add('error');
+                        formAlert.textContent = 'An error occurred while sending your message. Please try again later.';
+                    } else {
+                        alert('An error occurred while sending your message. Please try again later.');
+                    }
+                } finally {
+                    if(submitBtn) {
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.disabled = false;
+                    }
                 }
             });
         }
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </body>
 </html>
