@@ -367,7 +367,7 @@
                 <p class="card-hint">Click to view full profile</p>
             </article>
 
-            <article class="employee-card">
+            <article class="employee-card employee-card-clickable" id="shadaabCard" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="shadaabProfileModal" aria-expanded="false">
                 <div class="avatar">MS</div>
                 <h2 class="employee-name">M Shadaab Akhtar</h2>
                 <p class="employee-qualification">(Architecture)</p>
@@ -375,6 +375,7 @@
                     <span class="tag-dot"></span>
                     4 Years Experience
                 </span>
+                <p class="card-hint">Click to view full profile</p>
             </article>
         </section>
     </main>
@@ -455,49 +456,163 @@
         </div>
     </div>
 
-    <script>
-        const khalidCard = document.getElementById("khalidCard");
-        const khalidProfileModal = document.getElementById("khalidProfileModal");
-        const khalidModalClose = document.getElementById("khalidModalClose");
-        let lastFocusedElement = null;
+    <div class="profile-modal" id="shadaabProfileModal" aria-hidden="true">
+        <div class="profile-modal-panel" role="dialog" aria-modal="true" aria-labelledby="shadaabProfileTitle">
+            <button class="modal-close" id="shadaabModalClose" type="button" aria-label="Close Shadaab profile">&times;</button>
+            <div class="modal-header">
+                <div class="avatar modal-avatar">MS</div>
+                <div>
+                    <h2 class="modal-name" id="shadaabProfileTitle">Ar. Shadaab Akhtar</h2>
+                    <p class="modal-role">Architect Profile</p>
+                </div>
+            </div>
 
-        const openKhalidModal = () => {
+            <div class="profile-sections">
+                <section class="profile-section">
+                    <h3>About</h3>
+                    <p class="profile-body">
+                        Ar. Shadaab Akhtar is a creative and detail-oriented architect with over 3 years of professional experience and a Master&apos;s degree in Architecture (M.Arch). He specializes in transforming innovative ideas into functional, sustainable, and aesthetically refined architectural spaces.
+                    </p>
+                    <p class="profile-body">
+                        He has strong expertise in concept development, architectural design, and building planning, along with hands-on experience in project coordination and construction management, ensuring seamless execution from concept to completion.
+                    </p>
+                </section>
+
+                <section class="profile-section">
+                    <h3>Professional Expertise</h3>
+                    <ul class="profile-list">
+                        <li>Architectural Design and Planning</li>
+                        <li>Concept Development and Space Optimization</li>
+                        <li>Interior and Exterior Design</li>
+                        <li>2D and 3D Modeling and Rendering</li>
+                        <li>Construction and Site Coordination</li>
+                        <li>Project Management and Execution</li>
+                    </ul>
+                </section>
+
+                <section class="profile-section">
+                    <h3>Experience Summary</h3>
+                    <ul class="profile-list">
+                        <li>Intermediate Architect - Torex India Pvt. Ltd. (2023-2025): Worked on healthcare projects (government and private hospitals), with focus on design planning, interiors, 3D modeling, and client interaction.</li>
+                        <li>Junior Architect - SSA Architects (2022): Involved in industrial and hotel projects, responsible for concept development and technical documentation.</li>
+                        <li>Junior Architect - N&amp;D Architects (2021-2022): Worked on residential and commercial projects, created 2D/3D drawings, and handled site coordination.</li>
+                    </ul>
+                </section>
+
+                <section class="profile-section">
+                    <h3>Education</h3>
+                    <ul class="profile-list">
+                        <li>Master of Architecture (M.Arch) - Jamia Millia Islamia, New Delhi (2023-2025)</li>
+                        <li>Bachelor of Architecture (B.Arch) - Accurate Institute of Architecture and Planning (2017-2022)</li>
+                    </ul>
+                </section>
+
+                <section class="profile-section">
+                    <h3>Software Skills</h3>
+                    <ul class="profile-list">
+                        <li>AutoCAD</li>
+                        <li>SketchUp</li>
+                        <li>Lumion</li>
+                        <li>V-Ray</li>
+                        <li>D5 Render</li>
+                        <li>Adobe Photoshop</li>
+                        <li>MS Office (Word, Excel, PowerPoint)</li>
+                    </ul>
+                </section>
+
+                <section class="profile-section">
+                    <h3>Achievements</h3>
+                    <ul class="profile-list">
+                        <li>Shortlisted in NASA Robins Competition</li>
+                        <li>Shortlisted in NASA Design Competition</li>
+                        <li>Top 3 Thesis Work in M.Arch</li>
+                    </ul>
+                </section>
+
+                <section class="profile-section">
+                    <h3>Key Projects</h3>
+                    <ul class="profile-list">
+                        <li>Medical College Campus - New Delhi</li>
+                        <li>Superspeciality Cardiac Hospital - Noida</li>
+                        <li>Shopping Mall - Noida</li>
+                        <li>Urban Design - Connaught Place, Delhi</li>
+                    </ul>
+                    <p class="profile-body">
+                        These projects showcase expertise in healthcare, commercial, and urban planning design.
+                    </p>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const profileConfigs = [
+            {
+                cardId: "khalidCard",
+                modalId: "khalidProfileModal",
+                closeId: "khalidModalClose"
+            },
+            {
+                cardId: "shadaabCard",
+                modalId: "shadaabProfileModal",
+                closeId: "shadaabModalClose"
+            }
+        ];
+
+        let lastFocusedElement = null;
+        let activeProfileModal = null;
+
+        const openProfileModal = (card, modal, closeButton) => {
             lastFocusedElement = document.activeElement;
-            khalidProfileModal.classList.add("show");
-            khalidProfileModal.setAttribute("aria-hidden", "false");
-            khalidCard.setAttribute("aria-expanded", "true");
+            activeProfileModal = { card, modal, closeButton };
+            modal.classList.add("show");
+            modal.setAttribute("aria-hidden", "false");
+            card.setAttribute("aria-expanded", "true");
             document.body.style.overflow = "hidden";
-            khalidModalClose.focus();
+            closeButton.focus();
         };
 
-        const closeKhalidModal = () => {
-            khalidProfileModal.classList.remove("show");
-            khalidProfileModal.setAttribute("aria-hidden", "true");
-            khalidCard.setAttribute("aria-expanded", "false");
+        const closeProfileModal = () => {
+            if (!activeProfileModal) {
+                return;
+            }
+
+            const { card, modal } = activeProfileModal;
+            modal.classList.remove("show");
+            modal.setAttribute("aria-hidden", "true");
+            card.setAttribute("aria-expanded", "false");
             document.body.style.overflow = "";
+            activeProfileModal = null;
+
             if (lastFocusedElement) {
                 lastFocusedElement.focus();
             }
         };
 
-        khalidCard.addEventListener("click", openKhalidModal);
-        khalidCard.addEventListener("keydown", (event) => {
-            if (event.key === "Enter" || event.key === " ") {
-                event.preventDefault();
-                openKhalidModal();
-            }
-        });
+        profileConfigs.forEach(({ cardId, modalId, closeId }) => {
+            const card = document.getElementById(cardId);
+            const modal = document.getElementById(modalId);
+            const closeButton = document.getElementById(closeId);
 
-        khalidModalClose.addEventListener("click", closeKhalidModal);
-        khalidProfileModal.addEventListener("click", (event) => {
-            if (event.target === khalidProfileModal) {
-                closeKhalidModal();
-            }
+            card.addEventListener("click", () => openProfileModal(card, modal, closeButton));
+            card.addEventListener("keydown", (event) => {
+                if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    openProfileModal(card, modal, closeButton);
+                }
+            });
+
+            closeButton.addEventListener("click", closeProfileModal);
+            modal.addEventListener("click", (event) => {
+                if (event.target === modal) {
+                    closeProfileModal();
+                }
+            });
         });
 
         document.addEventListener("keydown", (event) => {
-            if (event.key === "Escape" && khalidProfileModal.classList.contains("show")) {
-                closeKhalidModal();
+            if (event.key === "Escape" && activeProfileModal) {
+                closeProfileModal();
             }
         });
     </script>
