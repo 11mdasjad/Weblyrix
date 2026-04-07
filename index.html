@@ -585,10 +585,23 @@
             background: var(--glass-bg);
             border: 1px solid var(--glass-border);
             border-radius: 20px;
-            padding: 2rem;
+            padding: 0;
             transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
+        }
+        .service-card-img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        .service-card:hover .service-card-img {
+            transform: scale(1.06);
+        }
+        .service-card-body {
+            padding: 1.5rem;
         }
 
         .service-card::before {
@@ -1504,6 +1517,128 @@
             color: var(--text-primary);
             cursor: pointer;
         }
+        /* Service Modal */
+        .service-modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.7);
+            backdrop-filter: blur(6px);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+        .service-modal-overlay.active {
+            display: flex;
+        }
+        .service-modal {
+            background: var(--bg-secondary);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            max-width: 600px;
+            width: 100%;
+            max-height: 85vh;
+            overflow-y: auto;
+            padding: 2.5rem;
+            position: relative;
+            animation: modalIn 0.3s ease;
+        }
+        @keyframes modalIn {
+            from { opacity: 0; transform: translateY(30px) scale(0.95); }
+            to   { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        .service-modal-close {
+            position: absolute;
+            top: 1.2rem;
+            right: 1.5rem;
+            font-size: 1.8rem;
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            cursor: pointer;
+            line-height: 1;
+            transition: color 0.2s;
+        }
+        .service-modal-close:hover { color: var(--accent); }
+        .service-modal-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+        .service-modal-icon {
+            width: 64px;
+            height: 64px;
+            background: rgba(var(--accent-rgb), 0.15);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.2rem;
+        }
+        .service-modal-icon svg {
+            width: 32px;
+            height: 32px;
+            stroke: var(--accent);
+            fill: none;
+            stroke-width: 1.8;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+        .service-modal h2 {
+            font-size: 1.6rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-primary);
+        }
+        .service-modal-tagline {
+            color: var(--accent);
+            font-size: 0.95rem;
+            margin-bottom: 1.2rem;
+            font-weight: 500;
+        }
+        .service-modal-desc {
+            color: var(--text-secondary);
+            line-height: 1.75;
+            margin-bottom: 1.5rem;
+        }
+        .service-modal-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.6rem;
+        }
+        .service-modal-features li {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .service-modal-features li::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent);
+            flex-shrink: 0;
+        }
+        .service-modal-cta {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            background: var(--accent);
+            color: #fff;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+        .service-modal-cta:hover { opacity: 0.85; }
+        .service-card { cursor: pointer; }
     </style>
 </head>
 <body>
@@ -1648,76 +1783,136 @@
         </div>
 
         <div class="services-grid">
-            <div class="service-card reveal">
-                <div class="service-icon">
-                    <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            <div class="service-card reveal" onclick="openServiceModal('Web Development')">
+                <img class="service-card-img" src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=700&h=300&fit=crop&auto=format" alt="Web Development" loading="lazy">
+                <div class="service-card-body">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    </div>
+                    <h3 class="service-title">Web Development</h3>
+                    <p class="service-desc">Custom websites built with modern technologies for optimal performance and user experience.</p>
                 </div>
-                <h3 class="service-title">Web Development</h3>
-                <p class="service-desc">Custom websites built with modern technologies for optimal performance and user experience.</p>
             </div>
 
-            <div class="service-card reveal">
-                <div class="service-icon">
-                    <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            <div class="service-card reveal" onclick="openServiceModal('Full Stack Development')">
+                <img class="service-card-img" src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=700&h=300&fit=crop&auto=format" alt="Full Stack Development" loading="lazy">
+                <div class="service-card-body">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <h3 class="service-title">Full Stack Development</h3>
+                    <p class="service-desc">End-to-end application development with robust backends and stunning frontends.</p>
                 </div>
-                <h3 class="service-title">Full Stack Development</h3>
-                <p class="service-desc">End-to-end application development with robust backends and stunning frontends.</p>
             </div>
 
-            <div class="service-card reveal">
-                <div class="service-icon">
-                    <svg viewBox="0 0 24 24"><path d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+            <div class="service-card reveal" onclick="openServiceModal('Mobile Apps')">
+                <img class="service-card-img" src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=700&h=300&fit=crop&auto=format" alt="Mobile Apps" loading="lazy">
+                <div class="service-card-body">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+                    </div>
+                    <h3 class="service-title">Mobile Apps</h3>
+                    <p class="service-desc">Native and cross-platform mobile applications for iOS and Android.</p>
                 </div>
-                <h3 class="service-title">Mobile Apps</h3>
-                <p class="service-desc">Native and cross-platform mobile applications for iOS and Android.</p>
             </div>
 
-            <div class="service-card reveal">
-                <div class="service-icon">
-                    <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            <div class="service-card reveal" onclick="openServiceModal('Research Papers')">
+                <img class="service-card-img" src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=700&h=300&fit=crop&auto=format" alt="Research Papers" loading="lazy">
+                <div class="service-card-body">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                    </div>
+                    <h3 class="service-title">Research Papers</h3>
+                    <p class="service-desc">Academic research and well-structured papers across various disciplines.</p>
                 </div>
-                <h3 class="service-title">Research Papers</h3>
-                <p class="service-desc">Academic research and well-structured papers across various disciplines.</p>
             </div>
 
-            <div class="service-card reveal">
-                <div class="service-icon">
-                    <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+            <div class="service-card reveal" onclick="openServiceModal('SEO Optimization')">
+                <img class="service-card-img" src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=700&h=300&fit=crop&auto=format" alt="SEO Optimization" loading="lazy">
+                <div class="service-card-body">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+                    </div>
+                    <h3 class="service-title">SEO Optimization</h3>
+                    <p class="service-desc">Data-driven SEO strategies to boost your online visibility and rankings.</p>
                 </div>
-                <h3 class="service-title">SEO Optimization</h3>
-                <p class="service-desc">Data-driven SEO strategies to boost your online visibility and rankings.</p>
             </div>
 
-            <div class="service-card reveal">
-                <div class="service-icon">
-                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <div class="service-card reveal" onclick="openServiceModal('Logo Design')">
+                <img class="service-card-img" src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=700&h=300&fit=crop&auto=format" alt="Logo Design" loading="lazy">
+                <div class="service-card-body">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <h3 class="service-title">Logo Design</h3>
+                    <p class="service-desc">Creative and memorable brand identities that make lasting impressions.</p>
                 </div>
-                <h3 class="service-title">Logo Design</h3>
-                <p class="service-desc">Creative and memorable brand identities that make lasting impressions.</p>
             </div>
 
-            <div class="service-card reveal">
-                <div class="service-icon">
-                    <svg viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/><path d="M8 10h.01"/><path d="M12 10h.01"/><path d="M16 10h.01"/></svg>
+            <div class="service-card reveal" onclick="openServiceModal('Architectural Design Services')">
+                <img class="service-card-img" src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=700&h=300&fit=crop&auto=format" alt="Architectural Design Services" loading="lazy">
+                <div class="service-card-body">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/><path d="M8 10h.01"/><path d="M12 10h.01"/><path d="M16 10h.01"/></svg>
+                    </div>
+                    <h3 class="service-title">Architectural Design Services</h3>
+                    <p class="service-desc">Concept-driven architectural design, smart space planning, and 3D visualizations for residential and commercial projects.</p>
                 </div>
-                <h3 class="service-title">Architectural Design Services</h3>
-                <p class="service-desc">Concept-driven architectural design, smart space planning, and 3D visualizations for residential and commercial projects.</p>
             </div>
 
-            <div class="service-card reveal">
-                <div class="service-icon">
-                    <svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            <div class="service-card reveal" onclick="openServiceModal('Assignment Help')">
+                <img class="service-card-img" src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=700&h=300&fit=crop&auto=format" alt="Assignment Help" loading="lazy">
+                <div class="service-card-body">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                    </div>
+                    <h3 class="service-title">Assignment Help</h3>
+                    <p class="service-desc">Expert assistance for college assignments and academic projects.</p>
                 </div>
-                <h3 class="service-title">Assignment Help</h3>
-                <p class="service-desc">Expert assistance for college assignments and academic projects.</p>
             </div>
 
-            <div class="service-card reveal">
-                <div class="service-icon">
-                    <svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+            <div class="service-card reveal" onclick="openServiceModal('IT Solutions')">
+                <img class="service-card-img" src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=700&h=300&fit=crop&auto=format" alt="IT Solutions" loading="lazy">
+                <div class="service-card-body">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+                    </div>
+                    <h3 class="service-title">IT Solutions</h3>
+                    <p class="service-desc">Comprehensive IT consulting and custom software solutions.</p>
                 </div>
-                <h3 class="service-title">IT Solutions</h3>
-                <p class="service-desc">Comprehensive IT consulting and custom software solutions.</p>
+            </div>
+
+            <div class="service-card reveal" onclick="openServiceModal('Generative AI')">
+                <img class="service-card-img" src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=700&h=300&fit=crop&auto=format" alt="Generative AI" loading="lazy">
+                <div class="service-card-body">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 2a2 2 0 012 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 017 7h1a1 1 0 010 2h-1v1a2 2 0 01-2 2H5a2 2 0 01-2-2v-1H2a1 1 0 010-2h1a7 7 0 017-7h1V5.73A2 2 0 0110 4a2 2 0 012-2zM9 9a5 5 0 00-5 5v3h16v-3a5 5 0 00-5-5H9z"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/></svg>
+                    </div>
+                    <h3 class="service-title">Generative AI</h3>
+                    <p class="service-desc">Custom GenAI solutions including LLM integration, prompt engineering, and AI-powered applications tailored to your business needs.</p>
+                </div>
+            </div>
+
+            <div class="service-card reveal" onclick="openServiceModal('Testing & QA')">
+                <img class="service-card-img" src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=700&h=300&fit=crop&auto=format" alt="Testing & QA" loading="lazy">
+                <div class="service-card-body">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9S3 16.97 3 12 7.03 3 12 3s9 4.03 9 9z"/><path d="M15 9h.01M9 15h.01"/></svg>
+                    </div>
+                    <h3 class="service-title">Testing & QA</h3>
+                    <p class="service-desc">End-to-end software testing services including manual, automated, performance, and security testing to ensure flawless product delivery.</p>
+                </div>
+            </div>
+
+            <div class="service-card reveal" onclick="openServiceModal('Machine Learning')">
+                <img class="service-card-img" src="https://images.unsplash.com/photo-1527430253228-e93688616381?w=700&h=300&fit=crop&auto=format" alt="Machine Learning" loading="lazy">
+                <div class="service-card-body">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/><circle cx="12" cy="12" r="2"/><path d="M12 8v1M12 15v1M8 12h1M15 12h1"/></svg>
+                    </div>
+                    <h3 class="service-title">Machine Learning</h3>
+                    <p class="service-desc">Data-driven ML model development, training, and deployment — from predictive analytics to deep learning solutions for real-world problems.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -2080,6 +2275,9 @@
                             <option value="logo">Logo Design</option>
                             <option value="assignment">Assignment Help</option>
                             <option value="it">IT Solutions</option>
+                            <option value="genai">Generative AI</option>
+                            <option value="testing">Testing & QA</option>
+                            <option value="ml">Machine Learning</option>
                             <option value="other">Other</option>
                         </select>
                     </div>
@@ -2131,6 +2329,9 @@
                         <li><a href="#services">SEO Optimization</a></li>
                         <li><a href="#services">Architectural Design</a></li>
                         <li><a href="#services">UI/UX Design</a></li>
+                        <li><a href="#services">Generative AI</a></li>
+                        <li><a href="#services">Testing & QA</a></li>
+                        <li><a href="#services">Machine Learning</a></li>
                     </ul>
                 </div>
 
@@ -2294,7 +2495,136 @@
                 }
             });
         }
+
+        // ── Service Modal ──────────────────────────────────────────
+        const serviceData = {
+            "Web Development": {
+                tagline: "Modern, fast & responsive websites",
+                desc: "We craft pixel-perfect websites tailored to your brand — from landing pages to full-scale web platforms. Every project is built with performance, accessibility, and scalability in mind using the latest web technologies.",
+                features: ["React / Next.js / Vue", "REST & GraphQL APIs", "SEO-ready structure", "Mobile-first design", "CMS integration", "Performance optimization"],
+                icon: `<svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>`,
+                image: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=700&h=300&fit=crop&auto=format"
+            },
+            "Full Stack Development": {
+                tagline: "End-to-end application engineering",
+                desc: "From database schema to UI components, we handle the full product lifecycle. Our engineers work across the entire stack to deliver reliable, maintainable, and scalable applications.",
+                features: ["Node.js / Django / Laravel", "PostgreSQL / MongoDB", "Docker & CI/CD", "Authentication & auth", "Cloud deployment (AWS/GCP)", "Microservices architecture"],
+                icon: `<svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>`,
+                image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=700&h=300&fit=crop&auto=format"
+            },
+            "Mobile Apps": {
+                tagline: "iOS & Android, built to perform",
+                desc: "We develop native and cross-platform mobile apps that deliver smooth, intuitive experiences. Whether you need a consumer app or an enterprise tool, we build it right the first time.",
+                features: ["React Native / Flutter", "iOS & Android", "Push notifications", "Offline support", "App Store publishing", "In-app purchases"],
+                icon: `<svg viewBox="0 0 24 24"><path d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>`,
+                image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=700&h=300&fit=crop&auto=format"
+            },
+            "Research Papers": {
+                tagline: "Academic writing you can trust",
+                desc: "Our experts produce well-structured, thoroughly cited research papers across engineering, computer science, business, and more. We follow your institution's formatting guidelines and deliver plagiarism-free work.",
+                features: ["IEEE / APA / MLA formats", "Literature reviews", "Data analysis", "Plagiarism-free", "Unlimited revisions", "On-time delivery"],
+                icon: `<svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>`,
+                image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=700&h=300&fit=crop&auto=format"
+            },
+            "SEO Optimization": {
+                tagline: "Rank higher, reach further",
+                desc: "We implement proven, data-driven SEO strategies that increase organic traffic and improve search rankings. From technical audits to content strategies, we cover the full SEO funnel.",
+                features: ["Technical SEO audit", "Keyword research", "On-page optimization", "Link building", "Core Web Vitals", "Monthly reporting"],
+                icon: `<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>`,
+                image: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=700&h=300&fit=crop&auto=format"
+            },
+            "Logo Design": {
+                tagline: "Brand identities that leave an impression",
+                desc: "We design distinctive, versatile logos and brand identities that communicate your values at a glance. Every design is delivered in all formats you need — print, digital, and beyond.",
+                features: ["Custom logo concepts", "Brand guidelines", "Vector source files", "Color & typography", "Social media kit", "Unlimited revisions"],
+                icon: `<svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`,
+                image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=700&h=300&fit=crop&auto=format"
+            },
+            "Architectural Design Services": {
+                tagline: "Spaces designed with purpose",
+                desc: "We offer concept-driven architectural design for residential and commercial projects — from initial sketches to detailed construction drawings and photorealistic 3D visualizations.",
+                features: ["2D floor plans", "3D visualization", "Interior design", "Construction drawings", "Smart space planning", "Residential & commercial"],
+                icon: `<svg viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/></svg>`,
+                image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=700&h=300&fit=crop&auto=format"
+            },
+            "Assignment Help": {
+                tagline: "Expert academic assistance",
+                desc: "Our qualified tutors and subject-matter experts assist students with college assignments, projects, and coursework across all major disciplines — ensuring conceptual clarity and academic accuracy.",
+                features: ["All subjects covered", "Step-by-step solutions", "Code & math help", "Report writing", "Plagiarism-free", "Fast turnaround"],
+                icon: `<svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>`,
+                image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=700&h=300&fit=crop&auto=format"
+            },
+            "IT Solutions": {
+                tagline: "Technology that works for you",
+                desc: "We provide comprehensive IT consulting and custom software solutions — from infrastructure setup to enterprise software development, helping businesses modernize and scale their technology.",
+                features: ["IT consulting", "Cloud solutions", "Network setup", "Custom software", "System integration", "24/7 support"],
+                icon: `<svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/></svg>`,
+                image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=700&h=300&fit=crop&auto=format"
+            },
+            "Generative AI": {
+                tagline: "Harness the power of AI for your business",
+                desc: "We build custom Generative AI solutions — integrating large language models, building intelligent chatbots, automating content workflows, and creating AI-powered features that give your product a competitive edge.",
+                features: ["LLM integration (GPT, Claude)", "Custom chatbots", "Prompt engineering", "RAG pipelines", "AI content automation", "Fine-tuning & evaluation"],
+                icon: `<svg viewBox="0 0 24 24"><path d="M12 2a2 2 0 012 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 017 7h1a1 1 0 010 2h-1v1a2 2 0 01-2 2H5a2 2 0 01-2-2v-1H2a1 1 0 010-2h1a7 7 0 017-7h1V5.73A2 2 0 0110 4a2 2 0 012-2z"/></svg>`,
+                image: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=700&h=300&fit=crop&auto=format"
+            },
+            "Testing & QA": {
+                tagline: "Ship with confidence, every time",
+                desc: "Our QA engineers deliver end-to-end testing across the entire software lifecycle — catching bugs before your users do and ensuring every release meets the highest quality standards.",
+                features: ["Manual testing", "Automated testing (Selenium, Cypress)", "API testing", "Performance testing", "Security testing", "Test documentation"],
+                icon: `<svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9S3 16.97 3 12 7.03 3 12 3s9 4.03 9 9z"/></svg>`,
+                image: "https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=700&h=300&fit=crop&auto=format"
+            },
+            "Machine Learning": {
+                tagline: "Data-driven intelligence at scale",
+                desc: "We design, train, and deploy machine learning models tailored to your data and goals — from predictive analytics and recommendation engines to computer vision and NLP systems.",
+                features: ["Data preprocessing", "Model training & tuning", "Deep learning (PyTorch/TF)", "NLP & computer vision", "Model deployment (APIs)", "Ongoing monitoring"],
+                icon: `<svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>`,
+                image: "https://images.unsplash.com/photo-1527430253228-e93688616381?w=700&h=300&fit=crop&auto=format"
+            }
+        };
+
+        function openServiceModal(title) {
+            const data = serviceData[title];
+            if (!data) return;
+            const img = document.getElementById('modalImage');
+            img.src = data.image;
+            img.alt = title;
+            document.getElementById('modalTitle').textContent = title;
+            document.getElementById('modalTagline').textContent = data.tagline;
+            document.getElementById('modalDesc').textContent = data.desc;
+            document.getElementById('modalIcon').innerHTML = data.icon;
+            const ul = document.getElementById('modalFeatures');
+            ul.innerHTML = data.features.map(f => `<li>${f}</li>`).join('');
+            document.getElementById('serviceModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeServiceModal(e) {
+            if (e && e.target !== document.getElementById('serviceModal') && e.type !== 'click') return;
+            if (e && e.currentTarget === document.getElementById('serviceModal') && e.target !== e.currentTarget) return;
+            document.getElementById('serviceModal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') closeServiceModal();
+        });
     </script>
+    <!-- Service Detail Modal -->
+    <div class="service-modal-overlay" id="serviceModal" onclick="closeServiceModal(event)">
+        <div class="service-modal">
+            <button class="service-modal-close" onclick="closeServiceModal()">&times;</button>
+            <img id="modalImage" class="service-modal-img" src="" alt="" loading="lazy">
+            <div class="service-modal-icon" id="modalIcon"></div>
+            <h2 id="modalTitle"></h2>
+            <p class="service-modal-tagline" id="modalTagline"></p>
+            <p class="service-modal-desc" id="modalDesc"></p>
+            <ul class="service-modal-features" id="modalFeatures"></ul>
+            <a href="#contact" class="service-modal-cta" onclick="closeServiceModal()">Get a Free Quote</a>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </body>
 </html>
