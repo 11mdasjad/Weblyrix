@@ -6,7 +6,7 @@
     <title>Weblyrix Digital Solutions | Premium Tech Solutions</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg-primary: #ffffff;
@@ -780,6 +780,182 @@
             height: 22px;
             fill: var(--text-secondary);
             transition: fill 0.3s ease;
+        }
+
+        /* Our Team */
+        .team {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(180deg, #ffffff 0%, #f4f6ff 45%, #eef1fc 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .team::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(var(--accent-rgb), 0.08) 0%, transparent 55%);
+            pointer-events: none;
+        }
+
+        .team .section-header {
+            position: relative;
+            z-index: 1;
+        }
+
+        .team .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .team .section-subtitle {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .team-grid {
+            max-width: 920px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .team-card {
+            background: rgba(255, 255, 255, 0.92);
+            border: 1px solid rgba(99, 102, 241, 0.12);
+            border-radius: 28px;
+            padding: 2.75rem 2.5rem 2.5rem;
+            text-align: center;
+            box-shadow:
+                0 4px 24px rgba(31, 41, 55, 0.06),
+                0 20px 50px rgba(79, 70, 229, 0.08);
+            transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 0.45s ease,
+                border-color 0.35s ease;
+        }
+
+        .team-card:hover {
+            transform: scale(1.02) translateY(-4px);
+            border-color: rgba(99, 102, 241, 0.22);
+            box-shadow:
+                0 12px 40px rgba(31, 41, 55, 0.1),
+                0 28px 70px rgba(79, 70, 229, 0.14),
+                0 0 0 1px rgba(129, 140, 248, 0.15);
+        }
+
+        .team-member-photo {
+            width: 220px;
+            height: 220px;
+            margin: 0 auto 1.75rem;
+            padding: 4px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #312e81 0%, #6366f1 40%, #818cf8 70%, #c4b5fd 100%);
+            box-shadow:
+                0 0 0 1px rgba(255, 255, 255, 0.5) inset,
+                0 0 32px rgba(99, 102, 241, 0.45),
+                0 0 64px rgba(129, 140, 248, 0.25),
+                0 12px 40px rgba(79, 70, 229, 0.2);
+        }
+
+        .team-member-photo img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center 28%;
+            display: block;
+            background: var(--bg-tertiary);
+        }
+
+        .team-member-name {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(1.65rem, 4vw, 2.1rem);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.35rem;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+
+        .team-member-role {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, #3730a3 0%, #6366f1 45%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-member-company {
+            font-size: 0.88rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            margin-bottom: 1.35rem;
+            letter-spacing: 0.02em;
+        }
+
+        .team-member-bio {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--text-secondary);
+            line-height: 1.85;
+            max-width: 560px;
+            margin: 0 auto 1.75rem;
+        }
+
+        .team-social {
+            display: flex;
+            justify-content: center;
+            gap: 0.85rem;
+        }
+
+        .team-social a {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(180deg, #ffffff 0%, #f5f7ff 100%);
+            border: 1px solid rgba(99, 102, 241, 0.18);
+            color: #4f46e5;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+            box-shadow: 0 4px 14px rgba(79, 70, 229, 0.1);
+        }
+
+        .team-social a:hover {
+            transform: translateY(-3px);
+            border-color: rgba(99, 102, 241, 0.35);
+            color: #4338ca;
+            box-shadow:
+                0 8px 24px rgba(79, 70, 229, 0.2),
+                0 0 24px rgba(129, 140, 248, 0.25);
+        }
+
+        .team-social svg {
+            width: 22px;
+            height: 22px;
+            fill: currentColor;
+        }
+
+        .reveal.reveal-delay {
+            transition-delay: 0.18s;
+        }
+
+        @media (max-width: 768px) {
+            .team-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .team-member-photo {
+                width: 180px;
+                height: 180px;
+            }
         }
 
         /* Why Choose Us */
@@ -1656,6 +1832,7 @@
         <ul>
             <li><a href="#services" onclick="closeMobileMenu()">Services</a></li>
             <li><a href="#about" onclick="closeMobileMenu()">About</a></li>
+            <li><a href="#team" onclick="closeMobileMenu()">Team</a></li>
             <li><a href="employee.html" onclick="closeMobileMenu()">Employee</a></li>
             <li><a href="#portfolio" onclick="closeMobileMenu()">Portfolio</a></li>
             <li><a href="#testimonials" onclick="closeMobileMenu()">Testimonials</a></li>
@@ -1672,6 +1849,7 @@
             <ul class="nav-links">
                 <li><a href="#services">Services</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#team">Team</a></li>
                 <li><a href="employee.html">Employee</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
@@ -1953,6 +2131,34 @@
                     </a>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Our Team -->
+    <section class="team" id="team">
+        <div class="section-header reveal">
+            <span class="section-badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+                Our Team
+            </span>
+            <h2 class="section-title">The People Behind Weblyrix</h2>
+            <p class="section-subtitle">Meet the professionals who drive strategy, delivery, and excellence across every engagement.</p>
+        </div>
+        <div class="team-grid">
+            <article class="team-card reveal reveal-delay">
+                <div class="team-member-photo">
+                    <img src="rahil%20image.jpeg" alt="Raquibuddin Ahmad, Project Manager at Weblyrix Digital Solutions" width="440" height="440" loading="lazy" decoding="async" />
+                </div>
+                <h3 class="team-member-name">Raquibuddin Ahmad</h3>
+                <p class="team-member-role">Project Manager</p>
+                <p class="team-member-company">Weblyrix Digital Solutions</p>
+                <p class="team-member-bio">A results-driven Project Manager with strong leadership, communication, and execution skills. Passionate about delivering high-quality digital solutions and ensuring client satisfaction.</p>
+                <div class="team-social">
+                    <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="Raquibuddin Ahmad on LinkedIn">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+                    </a>
+                </div>
+            </article>
         </div>
     </section>
 
@@ -2339,6 +2545,7 @@
                     <h4>Company</h4>
                     <ul>
                         <li><a href="#about">About Us</a></li>
+                        <li><a href="#team">Our Team</a></li>
                         <li><a href="employee.html">Employee</a></li>
                         <li><a href="#portfolio">Portfolio</a></li>
                         <li><a href="#testimonials">Testimonials</a></li>
