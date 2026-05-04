@@ -4,6 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weblyrix Digital Solutions | Premium Tech Solutions</title>
+    <link rel="icon" href="./assets/weblyrix_logo_full.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="./assets/weblyrix_logo_full.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./assets/weblyrix_logo_full.svg">
+    <meta name="application-name" content="Weblyrix Digital Solutions">
+    <meta name="description" content="Weblyrix Digital Solutions delivers premium web development, mobile apps, SEO, design, IT solutions, and AI services.">
+    <meta property="og:title" content="Weblyrix Digital Solutions | Premium Tech Solutions">
+    <meta property="og:description" content="Cutting-edge digital solutions to help your business grow online.">
+    <meta property="og:image" content="./assets/weblyrix_logo_full.svg">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Weblyrix Digital Solutions | Premium Tech Solutions">
+    <meta name="twitter:description" content="Cutting-edge digital solutions to help your business grow online.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -2165,7 +2177,7 @@
             </article>
             <article class="team-card reveal reveal-delay">
                 <div class="team-member-photo">
-                    <img src="a.jpeg" alt="Amash Tahsin, Project Manager at Weblyrix Digital Solutions" width="440" height="440" loading="lazy" decoding="async" />
+                    <img src="./amash.jpeg" alt="Amash Tahsin, Project Manager at Weblyrix Digital Solutions" width="440" height="440" loading="lazy" decoding="async" />
                 </div>
                 <h3 class="team-member-name">Amash Tahsin</h3>
                 <p class="team-member-role"> CEO</p>
@@ -2663,9 +2675,11 @@
                 event.preventDefault();
 
                 const submitBtn = event.target.querySelector('button[type="submit"]');
-                const originalText = submitBtn.innerHTML;
-                submitBtn.innerHTML = 'Sending...';
-                if(submitBtn) submitBtn.disabled = true;
+                const originalText = submitBtn ? submitBtn.innerHTML : '';
+                if (submitBtn) {
+                    submitBtn.innerHTML = 'Sending...';
+                    submitBtn.disabled = true;
+                }
 
                 const formData = {
                     name: document.getElementById('name').value,
@@ -2836,6 +2850,7 @@
             if (e.key === 'Escape') closeServiceModal();
         });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <!-- Service Detail Modal -->
     <div class="service-modal-overlay" id="serviceModal" onclick="closeServiceModal(event)">
         <div class="service-modal">
@@ -2850,6 +2865,5 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </body>
 </html>
