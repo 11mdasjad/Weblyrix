@@ -826,11 +826,11 @@
         }
 
         .team-grid {
-            max-width: 1200px;
+            max-width: 1440px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 1.25rem;
             position: relative;
             z-index: 1;
         }
@@ -839,7 +839,7 @@
             background: rgba(255, 255, 255, 0.92);
             border: 1px solid rgba(99, 102, 241, 0.12);
             border-radius: 28px;
-            padding: 2.75rem 2.5rem 2.5rem;
+            padding: 2.25rem 1.35rem 2rem;
             text-align: center;
             box-shadow:
                 0 4px 24px rgba(31, 41, 55, 0.06),
@@ -859,9 +859,9 @@
         }
 
         .team-member-photo {
-            width: 220px;
-            height: 220px;
-            margin: 0 auto 1.75rem;
+            width: clamp(150px, 13vw, 190px);
+            height: clamp(150px, 13vw, 190px);
+            margin: 0 auto 1.5rem;
             padding: 4px;
             border-radius: 50%;
             background: linear-gradient(135deg, #312e81 0%, #6366f1 40%, #818cf8 70%, #c4b5fd 100%);
@@ -957,6 +957,23 @@
 
         .reveal.reveal-delay {
             transition-delay: 0.18s;
+        }
+
+        @media (max-width: 1180px) {
+            .team-grid {
+                max-width: 900px;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 1.5rem;
+            }
+
+            .team-card {
+                padding: 2.5rem 2rem 2.25rem;
+            }
+
+            .team-member-photo {
+                width: 200px;
+                height: 200px;
+            }
         }
 
         @media (max-width: 768px) {
