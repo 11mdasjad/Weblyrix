@@ -1,0 +1,1738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weblyrix Digital Solutions | Plans & Pricing</title>
+    <meta name="description" content="Explore premium web development, dynamic design, and multi-vendor e-commerce pricing packages at Weblyrix. Solid plans built for ultimate scale.">
+    <!-- Favicon -->
+    <link rel="icon" href="./assets/weblyrix_logo_full.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="./assets/weblyrix_logo_full.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./assets/weblyrix_logo_full.svg">
+    <meta name="application-name" content="Weblyrix Digital Solutions">
+    <meta property="og:title" content="Weblyrix Digital Solutions | Plans & Pricing">
+    <meta property="og:description" content="Explore premium web development, dynamic design, and multi-vendor e-commerce pricing packages at Weblyrix.">
+    <meta property="og:image" content="./assets/weblyrix_logo_full.svg">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Weblyrix Digital Solutions | Plans & Pricing">
+    <meta name="twitter:description" content="Explore premium web development, dynamic design, and multi-vendor e-commerce pricing packages at Weblyrix.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f5f7ff;
+            --bg-tertiary: #e9edff;
+            --text-primary: #1f2937;
+            --text-secondary: #5b6675;
+            --text-muted: #7f8b98;
+            --accent-primary: #6366f1;
+            --accent-secondary: #4f46e5;
+            --accent-tertiary: #818cf8;
+            --gradient-primary: linear-gradient(135deg, #4f46e5 0%, #6366f1 50%, #818cf8 100%);
+            --gradient-glow: linear-gradient(135deg, rgba(79, 70, 229, 0.28) 0%, rgba(99, 102, 241, 0.2) 50%, rgba(129, 140, 248, 0.18) 100%);
+            --glass-bg: rgba(255, 255, 255, 0.9);
+            --glass-border: rgba(55, 65, 141, 0.14);
+            --shadow-glow: 0 0 45px rgba(99, 102, 241, 0.2);
+            --accent-contrast: #ffffff;
+            --accent-rgb: 99, 102, 241;
+            --accent-secondary-rgb: 129, 140, 248;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Sora', sans-serif;
+            background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+            color: var(--text-primary);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* Webkit scrollbar matching home page */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-primary);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--gradient-primary);
+            border-radius: 4px;
+        }
+
+        /* Animated Background */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .bg-grid {
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background-image:
+                linear-gradient(rgba(var(--accent-rgb), 0.045) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(var(--accent-rgb), 0.045) 1px, transparent 1px);
+            background-size: 60px 60px;
+            animation: gridMove 20s linear infinite;
+            transform: perspective(500px) rotateX(60deg);
+            top: -50%;
+        }
+
+        @keyframes gridMove {
+            0% {
+                transform: perspective(500px) rotateX(60deg) translateY(0);
+            }
+            100% {
+                transform: perspective(500px) rotateX(60deg) translateY(60px);
+            }
+        }
+
+        .floating-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            animation: float 15s ease-in-out infinite;
+        }
+
+        .orb-1 {
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(var(--accent-rgb), 0.14) 0%, transparent 70%);
+            top: -200px;
+            right: -200px;
+        }
+
+        .orb-2 {
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(var(--accent-secondary-rgb), 0.13) 0%, transparent 70%);
+            bottom: -150px;
+            left: -150px;
+            animation-delay: -7s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translate(0, 0) scale(1);
+            }
+            25% {
+                transform: translate(30px, -30px) scale(1.05);
+            }
+            50% {
+                transform: translate(-20px, 20px) scale(0.95);
+            }
+            75% {
+                transform: translate(20px, 10px) scale(1.02);
+            }
+        }
+
+        /* Navigation (Ultra-Premium Floating Glassmorphic Capsule) */
+        .navbar {
+            position: fixed;
+            top: 1.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 3rem);
+            max-width: 1400px;
+            z-index: 1000;
+            padding: 0.65rem 2rem;
+            background: rgba(255, 255, 255, 0.72);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.55);
+            border-radius: 100px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .navbar.scrolled {
+            top: 0.75rem;
+            background: rgba(255, 255, 255, 0.85);
+            border-color: rgba(99, 102, 241, 0.15);
+            box-shadow: 0 12px 40px rgba(99, 102, 241, 0.08);
+            padding: 0.45rem 2rem;
+        }
+
+        .nav-container {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .navbar .logo img {
+            height: 52px;
+            width: auto;
+            display: block;
+            filter: drop-shadow(0 0 10px rgba(var(--accent-rgb), 0.12)) contrast(1.05);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .navbar.scrolled .logo img {
+            height: 44px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            padding: 0.5rem 0.95rem;
+            border-radius: 50px;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--accent-primary);
+            background: rgba(99, 102, 241, 0.06);
+        }
+
+        .nav-cta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .nav-cta .btn {
+            padding: 0.6rem 1.4rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border-radius: 50px;
+            letter-spacing: -0.1px;
+            background: var(--gradient-primary);
+            color: var(--accent-contrast);
+            border: none;
+            box-shadow: 0 4px 15px rgba(79, 70, 229, 0.15);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .nav-cta .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(79, 70, 229, 0.25);
+        }
+
+        .status-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.45rem 1rem;
+            background: rgba(34, 197, 94, 0.07);
+            border: 1px solid rgba(34, 197, 94, 0.16);
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #16a34a;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: #16a34a;
+            border-radius: 50%;
+            animation: pulse-green 2s infinite;
+        }
+
+        @keyframes pulse-green {
+            0% {
+                box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 8px rgba(22, 163, 74, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(22, 163, 74, 0);
+            }
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.6rem;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: var(--accent-contrast);
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(99, 102, 241, 0.5);
+        }
+
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .mobile-toggle span {
+            width: 25px;
+            height: 2px;
+            background: var(--text-primary);
+            transition: all 0.3s ease;
+        }
+
+        /* Mobile Menu overlay matching index.html */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            left: 100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px);
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .mobile-menu.active {
+            left: 0;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .mobile-menu a {
+            text-decoration: none;
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            font-weight: 600;
+            font-family: 'Orbitron', sans-serif;
+            transition: color 0.3s ease;
+        }
+
+        .mobile-menu a:hover,
+        .mobile-menu a.active {
+            color: var(--accent-primary);
+        }
+
+        /* Main Hero Section */
+        .pricing-hero {
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-badge {
+            background: rgba(99, 102, 241, 0.08);
+            color: var(--accent-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 99px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: 1px solid rgba(99, 102, 241, 0.15);
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.03);
+        }
+
+        .pricing-hero h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #1f2937 0%, #4f46e5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
+        }
+
+        .pricing-hero p {
+            color: var(--text-secondary);
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            line-height: 1.6;
+        }
+
+        /* Category Segmented Tabs */
+        .tabs-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 4rem;
+        }
+
+        .segmented-tabs {
+            background: rgba(255, 255, 255, 0.7);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 0.4rem;
+            display: flex;
+            gap: 0.2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+            backdrop-filter: blur(10px);
+            position: relative;
+        }
+
+        .tab-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            font-family: 'Sora', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 0.8rem 1.8rem;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .tab-btn.active {
+            background: var(--gradient-primary);
+            color: var(--accent-contrast);
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.25);
+        }
+
+        .tab-btn svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        /* Plans Section Grid */
+        .plans-section {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem 6rem;
+            position: relative;
+        }
+
+        .plans-grid {
+            display: none;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            transition: opacity 0.4s ease, transform 0.4s ease;
+            transform: translateY(15px);
+            opacity: 0;
+        }
+
+        .plans-grid.active {
+            display: grid;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* 3-column specific adjustments for standard grids on large desktop screens */
+        @media (min-width: 1200px) {
+            .plans-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* High-Fidelity Pricing Cards */
+        .pricing-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 2.5rem 2rem;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 10px 40px rgba(99, 102, 241, 0.05);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+                        box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                        border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+        }
+
+        .pricing-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: transparent;
+            transition: background 0.3s ease;
+        }
+
+        .pricing-card.featured::before {
+            background: var(--gradient-primary);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-8px) scale(1.01);
+            box-shadow: 0 22px 50px rgba(99, 102, 241, 0.15);
+            border-color: rgba(99, 102, 241, 0.25);
+        }
+
+        .pricing-card.featured {
+            border-color: rgba(99, 102, 241, 0.28);
+            box-shadow: 0 12px 45px rgba(99, 102, 241, 0.08);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 250, 255, 0.98) 100%);
+        }
+
+        /* Glowing card background decor */
+        .card-decor {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.08) 0%, transparent 70%);
+            top: -50px;
+            right: -50px;
+            pointer-events: none;
+            z-index: 0;
+            transition: all 0.4s ease;
+        }
+
+        .pricing-card:hover .card-decor {
+            transform: scale(1.3);
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.16) 0%, transparent 70%);
+        }
+
+        /* Card Badges */
+        .card-badge {
+            align-self: flex-start;
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--accent-primary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 99px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.25rem;
+            border: 1px solid rgba(99, 102, 241, 0.18);
+            z-index: 1;
+        }
+
+        .pricing-card.featured .card-badge {
+            background: var(--gradient-primary);
+            color: var(--accent-contrast);
+            border: none;
+            box-shadow: 0 4px 10px rgba(99, 102, 241, 0.2);
+        }
+
+        /* Card Header */
+        .card-header {
+            margin-bottom: 1.5rem;
+            z-index: 1;
+        }
+
+        .card-header h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .card-header p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* Pricing Section */
+        .price-box {
+            margin-bottom: 2rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            padding-bottom: 1.5rem;
+            z-index: 1;
+        }
+
+        .price-strike {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            text-decoration: line-through;
+            font-weight: 500;
+            margin-bottom: 0.15rem;
+            display: block;
+        }
+
+        .price-val {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(2rem, 3.5vw, 2.6rem);
+            font-weight: 800;
+            color: var(--accent-primary);
+            line-height: 1;
+            margin-bottom: 0.4rem;
+            display: flex;
+            align-items: baseline;
+            gap: 0.2rem;
+            text-shadow: 0 2px 10px rgba(99, 102, 241, 0.1);
+        }
+
+        .price-gst {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #4f46e5;
+            background: rgba(79, 70, 229, 0.07);
+            padding: 0.25rem 0.6rem;
+            border-radius: 6px;
+            display: inline-block;
+        }
+
+        /* Features List block */
+        .card-features {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.9rem;
+            margin-bottom: 2.5rem;
+            z-index: 1;
+            flex-grow: 1;
+        }
+
+        .card-features li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+            line-height: 1.45;
+        }
+
+        .card-features li.highlighted-feature {
+            font-weight: 600;
+            color: var(--accent-secondary);
+        }
+
+        .card-features li svg {
+            width: 18px;
+            height: 18px;
+            color: #10b981;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        /* Action Buttons */
+        .pricing-card .btn-cta {
+            width: 100%;
+            z-index: 1;
+            margin-top: auto;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--accent-primary);
+            border: 1px solid rgba(99, 102, 241, 0.4);
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.02);
+        }
+
+        .btn-outline:hover {
+            background: rgba(99, 102, 241, 0.05);
+            border-color: var(--accent-primary);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(99, 102, 241, 0.1);
+        }
+
+        /* Comparison Section */
+        .comparison-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 6rem 2rem;
+            position: relative;
+        }
+
+        .comparison-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .comparison-header h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .comparison-header p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            border-radius: 20px;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(15px);
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            min-width: 900px;
+        }
+
+        .comparison-table th, 
+        .comparison-table td {
+            padding: 1.25rem 1.5rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            font-size: 0.88rem;
+        }
+
+        .comparison-table th {
+            background: rgba(99, 102, 241, 0.03);
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            color: var(--text-primary);
+            font-size: 0.9rem;
+        }
+
+        .comparison-table th:first-child {
+            width: 30%;
+        }
+
+        .comparison-table tr:hover td {
+            background: rgba(99, 102, 241, 0.015);
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison-table td.feature-title {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .comparison-table td svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .comparison-table td svg.check-icon {
+            color: #10b981;
+        }
+
+        .comparison-table td svg.cross-icon {
+            color: #ef4444;
+            opacity: 0.4;
+        }
+
+        /* Footer */
+        .footer {
+            background: #ffffff;
+            border-top: 1px solid var(--glass-border);
+            padding: 4rem 2rem 2rem;
+            position: relative;
+        }
+
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-main {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .footer-main p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            max-width: 400px;
+        }
+
+        /* High-Fidelity Socials Override integrated */
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .footer-social svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .footer-column h4 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .footer-column a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column a:hover {
+            color: var(--accent-primary);
+        }
+
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 0 auto;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .footer-bottom p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-primary);
+        }
+
+        /* Unified Brand Social Color Rules (Integrated perfectly) */
+        .footer-social a[aria-label*="LinkedIn"] {
+            background: rgba(0, 119, 181, 0.06) !important;
+            border: 1px solid rgba(0, 119, 181, 0.15) !important;
+        }
+        .footer-social a[aria-label*="LinkedIn"] svg {
+            fill: #0077b5 !important;
+        }
+        .footer-social a[aria-label*="LinkedIn"]:hover {
+            background: #0077b5 !important;
+            border-color: #0077b5 !important;
+            transform: translateY(-4px) scale(1.08) !important;
+            box-shadow: 0 8px 24px rgba(0, 119, 181, 0.35) !important;
+        }
+        .footer-social a[aria-label*="LinkedIn"]:hover svg {
+            fill: #ffffff !important;
+        }
+
+        .footer-social a[aria-label*="X"],
+        .footer-social a[aria-label*="Twitter"] {
+            background: rgba(29, 161, 242, 0.06) !important;
+            border: 1px solid rgba(29, 161, 242, 0.15) !important;
+        }
+        .footer-social a[aria-label*="X"] svg,
+        .footer-social a[aria-label*="Twitter"] svg {
+            fill: #1da1f2 !important;
+        }
+        .footer-social a[aria-label*="X"]:hover,
+        .footer-social a[aria-label*="Twitter"]:hover {
+            background: #1da1f2 !important;
+            border-color: #1da1f2 !important;
+            transform: translateY(-4px) scale(1.08) !important;
+            box-shadow: 0 8px 24px rgba(29, 161, 242, 0.35) !important;
+        }
+        .footer-social a[aria-label*="X"]:hover svg,
+        .footer-social a[aria-label*="Twitter"]:hover svg {
+            fill: #ffffff !important;
+        }
+
+        .footer-social a[aria-label*="Instagram"] {
+            background: rgba(225, 48, 108, 0.06) !important;
+            border: 1px solid rgba(225, 48, 108, 0.15) !important;
+        }
+        .footer-social a[aria-label*="Instagram"] svg {
+            fill: #e1306c !important;
+        }
+        .footer-social a[aria-label*="Instagram"]:hover {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888) !important;
+            border-color: transparent !important;
+            transform: translateY(-4px) scale(1.08) !important;
+            box-shadow: 0 8px 24px rgba(225, 48, 108, 0.35) !important;
+        }
+        .footer-social a[aria-label*="Instagram"]:hover svg {
+            fill: #ffffff !important;
+        }
+
+        .footer-social a[aria-label*="GitHub"] {
+            background: rgba(36, 41, 46, 0.06) !important;
+            border: 1px solid rgba(36, 41, 46, 0.15) !important;
+        }
+        .footer-social a[aria-label*="GitHub"] svg {
+            fill: #24292e !important;
+        }
+        .footer-social a[aria-label*="GitHub"]:hover {
+            background: #24292e !important;
+            border-color: #24292e !important;
+            transform: translateY(-4px) scale(1.08) !important;
+            box-shadow: 0 8px 24px rgba(36, 41, 46, 0.35) !important;
+        }
+        .footer-social a[aria-label*="GitHub"]:hover svg {
+            fill: #ffffff !important;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .footer-container {
+                grid-template-columns: 1fr 1fr;
+                gap: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                top: 0.75rem;
+                width: calc(100% - 1.5rem);
+                padding: 0.5rem 1.25rem;
+                border-radius: 50px;
+            }
+
+            .nav-links, 
+            .nav-cta {
+                display: none;
+            }
+
+            .mobile-toggle {
+                display: flex;
+            }
+
+            .navbar .logo img {
+                height: 38px;
+            }
+
+            .pricing-hero {
+                padding-top: 6.5rem;
+            }
+
+            .plans-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Animated Backdrop Grid -->
+    <div class="bg-animation">
+        <div class="bg-grid"></div>
+        <div class="floating-orb orb-1"></div>
+        <div class="floating-orb orb-2"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="./assets/weblyrix_logo_full.svg" alt="Weblyrix Digital Solutions logo" />
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#team">Team</a></li>
+                <li><a href="employee.html">Employee</a></li>
+                <li><a href="index.html#portfolio">Portfolio</a></li>
+                <li><a href="index.html#testimonials">Testimonials</a></li>
+                <li><a href="pricing.html" class="active">Pricing</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="nav-cta">
+                <div class="status-badge">
+                    <span class="status-dot"></span>
+                    Available Now
+                </div>
+                <a href="index.html#contact" class="btn btn-primary">Get Started</a>
+            </div>
+            <div class="mobile-toggle" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="index.html" onclick="toggleMobileMenu()">Home</a></li>
+            <li><a href="index.html#services" onclick="toggleMobileMenu()">Services</a></li>
+            <li><a href="index.html#about" onclick="toggleMobileMenu()">About</a></li>
+            <li><a href="index.html#team" onclick="toggleMobileMenu()">Team</a></li>
+            <li><a href="employee.html" onclick="toggleMobileMenu()">Employee</a></li>
+            <li><a href="index.html#portfolio" onclick="toggleMobileMenu()">Portfolio</a></li>
+            <li><a href="index.html#testimonials" onclick="toggleMobileMenu()">Testimonials</a></li>
+            <li><a href="pricing.html" class="active" onclick="toggleMobileMenu()">Pricing</a></li>
+            <li><a href="index.html#contact" onclick="toggleMobileMenu()">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Pricing Hero Header -->
+    <header class="pricing-hero">
+        <span class="section-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+                <line x1="12" y1="20" x2="12" y2="4" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+            </svg>
+            Flexible Investment
+        </span>
+        <h1>Web Development & Design Plans</h1>
+        <p>Premium visual design, hyper-scalable cloud architectures, and dedicated hosting setups tailored perfectly for your business growth.</p>
+        
+        <!-- Category Segmented Toggles -->
+        <div class="tabs-container">
+            <div class="segmented-tabs">
+                <button class="tab-btn active" onclick="switchCategory('web')">
+                    <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z"/></svg>
+                    Web Design & Custom
+                </button>
+                <button class="tab-btn" onclick="switchCategory('ecomm')">
+                    <svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+                    E-Commerce & Multi-Vendor
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="plans-section">
+        <!-- CATEGORY 1: Web Design & Business Plans -->
+        <div class="plans-grid active" id="categoryWeb">
+            
+            <!-- Standard Plan -->
+            <article class="pricing-card">
+                <div class="card-decor"></div>
+                <span class="card-badge">Essential Start</span>
+                <div class="card-header">
+                    <h3>Standard Plan</h3>
+                    <p>Web Development Standard Package</p>
+                </div>
+                <div class="price-box">
+                    <span class="price-strike">₹ 10,000</span>
+                    <span class="price-val">₹ 7,999</span>
+                    <span class="price-gst">( + 18% GST ₹ 1,440 )</span>
+                </div>
+                <ul class="card-features">
+                    <li class="highlighted-feature">
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        <strong>5 Pages Website</strong>
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        1 Year Free Domain Name ( .com .in .org )
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        1 Year Free Cloud Hosting
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Dynamic Website (Premium Design)
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Admin Dashboard Access
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Unlimited Images & Videos Upload
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Free SSL Certificates
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        5 Free Business Email IDs
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        SEO Friendly, 100% Responsive Design
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Live Chat, WhatsApp & Call Button
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Inquiry Form & Payment Gateway Integration
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        1 Year Free Tech & Hosting Support
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Annual Hosting Renewal: Rs. 4,000
+                    </li>
+                </ul>
+                <a href="https://wa.me/919905757447?text=Hello%20Weblyrix!%20I%20would%20like%20to%20inquire%20about%20the%20Standard%20Web%20Development%20Plan%20(%E2%82%B97,999).%20Please%20provide%20more%20details." class="btn btn-outline btn-cta" target="_blank" rel="noopener noreferrer">Call Now</a>
+            </article>
+
+            <!-- Premium Plan (Featured) -->
+            <article class="pricing-card featured">
+                <div class="card-decor"></div>
+                <span class="card-badge">Best Value</span>
+                <div class="card-header">
+                    <h3>Premium Plan</h3>
+                    <p>Web Development Premium Package</p>
+                </div>
+                <div class="price-box">
+                    <span class="price-strike">₹ 20,000</span>
+                    <span class="price-val">₹ 13,999</span>
+                    <span class="price-gst">( + 18% GST ₹ 2,520 )</span>
+                </div>
+                <ul class="card-features">
+                    <li class="highlighted-feature">
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        <strong>12 Pages Website</strong>
+                    </li>
+                    <li class="highlighted-feature">
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Google Search Console Setup
+                    </li>
+                    <li class="highlighted-feature">
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Woocommerce Core Setup
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        1 Year Free Domain Name ( .com .in .org )
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        1 Year Free Cloud Hosting & SSL
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Dynamic Website (Premium Design)
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        10 Free Business Email IDs
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Admin Dashboard Access & Support
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        SEO Friendly, 100% Responsive Design
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Unlimited Images & Videos Upload
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Live Chat, WhatsApp & Call Button
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Payment Gateway & Inquiry Integrations
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Hosting Renewal: Rs. 4,000 / Year
+                    </li>
+                </ul>
+                <a href="https://wa.me/919905757447?text=Hello%20Weblyrix!%20I%20would%20like%20to%20inquire%20about%20the%20Premium%20Web%20Development%20Plan%20(%E2%82%B913,999).%20Please%20provide%20more%20details." class="btn btn-primary btn-cta" target="_blank" rel="noopener noreferrer">Call Now</a>
+            </article>
+
+            <!-- Custom Plan -->
+            <article class="pricing-card">
+                <div class="card-decor"></div>
+                <span class="card-badge">Tailored Fit</span>
+                <div class="card-header">
+                    <h3>Custom Plan</h3>
+                    <p>Web Development Pro Package</p>
+                </div>
+                <div class="price-box">
+                    <span class="price-strike">₹ Customized</span>
+                    <span class="price-val">₹ On Demand</span>
+                    <span class="price-gst">( + 18% GST Applicable )</span>
+                </div>
+                <ul class="card-features">
+                    <li class="highlighted-feature">
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        <strong>Pages: According to Requirement</strong>
+                    </li>
+                    <li class="highlighted-feature">
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        1 Year 24/7 Free Support For Website
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        1 Year Free Domain Name ( .com .in .org )
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        1 Year Free Cloud Hosting & SSL
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Dynamic Website Architecture
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Admin Dashboard Access
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Google Search Console Setup
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        10 Free Business Email IDs
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        SEO Friendly, 100% Responsive Design
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Live Chat, WhatsApp & Call Button
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Payment Gateway & Inquiry Integrations
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Woocommerce Store Setup Features
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Annual Renewal: Rs. 4000
+                    </li>
+                </ul>
+                <a href="https://wa.me/919905757447?text=Hello%20Weblyrix!%20I%20am%20interested%20in%20the%20Web%20Development%20Pro%20Package%20(Custom%20Plan).%20I%20would%20like%20to%20discuss%20my%20requirements." class="btn btn-outline btn-cta" target="_blank" rel="noopener noreferrer">Call Now</a>
+            </article>
+        </div>
+
+        <!-- CATEGORY 2: E-Commerce & Multi-Vendor Plans -->
+        <div class="plans-grid" id="categoryEcomm">
+            
+            <!-- Premium E-Commerce Plan -->
+            <article class="pricing-card">
+                <div class="card-decor"></div>
+                <span class="card-badge">E-comm Specialist</span>
+                <div class="card-header">
+                    <h3>Premium E-Commerce</h3>
+                    <p>Web Development Premium E-commerce Plan</p>
+                </div>
+                <div class="price-box">
+                    <span class="price-strike">₹ 30,000</span>
+                    <span class="price-val">₹ 21,999</span>
+                    <span class="price-gst">( + 18% GST ₹ 3,960 )</span>
+                </div>
+                <ul class="card-features">
+                    <li class="highlighted-feature">
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        <strong>30 Pages Web Architecture</strong>
+                    </li>
+                    <li class="highlighted-feature">
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        20 Categories & 30 Products Listed
+                    </li>
+                    <li class="highlighted-feature">
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Wallet & Auto Invoice Billing System
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Order Notification & OTP Verification
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        1 Year Free Domain & Cloud Hosting
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Premium Theme & Visual Assets Setup
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Admin Access & Google Search Console
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        10 Free Business Email IDs & SSL
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        SEO Friendly, 100% Responsive Layouts
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Live Chat, WhatsApp & Call Buttons
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        E-commerce Variations & Cart Systems
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        1 Year Free Support & Hosting Maintenance
+                    </li>
+                </ul>
+                <a href="https://wa.me/919905757447?text=Hello%20Weblyrix!%20I%20would%20like%20to%20inquire%20about%20the%20Premium%20E-commerce%20Plan%20(%E2%82%B921,999).%20Please%20provide%20more%20details." class="btn btn-outline btn-cta" target="_blank" rel="noopener noreferrer">Call Now</a>
+            </article>
+
+            <!-- Multi-Vendor Business Plan (Featured) -->
+            <article class="pricing-card featured">
+                <div class="card-decor"></div>
+                <span class="card-badge">Ultimate Scale</span>
+                <div class="card-header">
+                    <h3>Multi-Vendor Business</h3>
+                    <p>Web Development Custom Design Ecommerce Plan</p>
+                </div>
+                <div class="price-box">
+                    <span class="price-strike">₹ 60,000</span>
+                    <span class="price-val">₹ 50,000</span>
+                    <span class="price-gst">( + 18% GST ₹ 9,000 )</span>
+                </div>
+                <ul class="card-features">
+                    <li class="highlighted-feature">
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        <strong>Dynamic Multi-Vendor Website</strong>
+                    </li>
+                    <li class="highlighted-feature">
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        40 Pages, 50 Categories & 30 Products listed
+                    </li>
+                    <li class="highlighted-feature">
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Multi-Level E-commerce & Wallet Core
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Auto Invoice Billing & Product Variations
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        OTP Verification & Order Notifications
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        1 Year Free Domain & Cloud Hosting
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Admin Dashboard & Google Search Console
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        20 Free Email IDs, Free SSL Certificates
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        SEO Friendly, 100% Responsive Website
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Live Chat, WhatsApp & Call Button
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        1 Year Free Technical Support & Hosting Care
+                    </li>
+                </ul>
+                <a href="https://wa.me/919905757447?text=Hello%20Weblyrix!%20I%20would%20like%20to%20inquire%20about%20the%20Multi-vendor%20Business%20%26%20E-commerce%20Plan%20(%E2%82%B950,000).%20Please%20provide%20more%20details." class="btn btn-primary btn-cta" target="_blank" rel="noopener noreferrer">Call Now</a>
+            </article>
+
+            <!-- Custom Multi-Vendor -->
+            <article class="pricing-card">
+                <div class="card-decor"></div>
+                <span class="card-badge">Enterprise Scale</span>
+                <div class="card-header">
+                    <h3>Custom Multi-Vendor</h3>
+                    <p>Web Development Multi-vendor Business & E-commerce Plan</p>
+                </div>
+                <div class="price-box">
+                    <span class="price-strike">₹ Custom Spec</span>
+                    <span class="price-val">₹ On Demand</span>
+                    <span class="price-gst">( + 18% GST Applicable )</span>
+                </div>
+                <ul class="card-features">
+                    <li class="highlighted-feature">
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        <strong>Pages: According to requirements</strong>
+                    </li>
+                    <li class="highlighted-feature">
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Custom Vendor Categories & Listings Scope
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Dynamic Multi-Vendor Infrastructure
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        1 Year Free Domain & Cloud Hosting
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Premium Theme & High-End Graphic Assets
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Admin Dashboard & Google Search Console
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        20 Free Email IDs, Free SSL Certificates
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        SEO Friendly, 100% Responsive Website
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Live Chat, WhatsApp & Call Button
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Multi-Level E-commerce Variations & Wallet Systems
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Order Notification & Auto Invoicing
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        1 Year Free Support & Hosting Maintenance
+                    </li>
+                </ul>
+                <a href="https://wa.me/919905757447?text=Hello%20Weblyrix!%20I%20am%20interested%20in%20the%20Custom%20Multi-vendor%20Business%20%26%20E-commerce%20Plan.%20I%20would%20like%20to%20discuss%20my%20marketplace%20requirements." class="btn btn-outline btn-cta" target="_blank" rel="noopener noreferrer">Call Now</a>
+            </article>
+        </div>
+    </main>
+
+    <!-- Detailed Plan Comparison Section -->
+    <section class="comparison-section">
+        <div class="comparison-header">
+            <h2>Detailed Features Comparison</h2>
+            <p>Compare the distinct specifications of our packages side-by-side to find the ideal match for your operational scale.</p>
+        </div>
+        <div class="table-responsive">
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Core Metrics & Features</th>
+                        <th>Standard Plan</th>
+                        <th>Premium Plan</th>
+                        <th>Premium E-Comm</th>
+                        <th>Multi-Vendor Biz</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="feature-title">Deliverable Page Count</td>
+                        <td>5 Pages</td>
+                        <td>12 Pages</td>
+                        <td>30 Pages</td>
+                        <td>40 Pages</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-title">Free Custom Domain (.com / .in / .org)</td>
+                        <td><svg class="check-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+                        <td><svg class="check-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+                        <td><svg class="check-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+                        <td><svg class="check-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+                    </tr>
+                    <tr>
+                        <td class="feature-title">Free Cloud Hosting Support</td>
+                        <td>1 Year Free</td>
+                        <td>1 Year Free</td>
+                        <td>1 Year Free</td>
+                        <td>1 Year Free</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-title">Annual Hosting Renewal Fee</td>
+                        <td>Rs. 4,000</td>
+                        <td>Rs. 4,000</td>
+                        <td>Rs. 4,000</td>
+                        <td>Rs. 4,000</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-title">SSL Certificates & Secure Gateway</td>
+                        <td><svg class="check-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+                        <td><svg class="check-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+                        <td><svg class="check-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+                        <td><svg class="check-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+                    </tr>
+                    <tr>
+                        <td class="feature-title">Business Email IDs</td>
+                        <td>5 Email IDs</td>
+                        <td>10 Email IDs</td>
+                        <td>10 Email IDs</td>
+                        <td>20 Email IDs</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-title">Google Search Console Setup</td>
+                        <td><svg class="cross-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></td>
+                        <td><svg class="check-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+                        <td><svg class="check-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+                        <td><svg class="check-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+                    </tr>
+                    <tr>
+                        <td class="feature-title">Core WooCommerce Integration</td>
+                        <td><svg class="cross-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></td>
+                        <td><svg class="check-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+                        <td><svg class="check-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+                        <td><svg class="check-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+                    </tr>
+                    <tr>
+                        <td class="feature-title">Product Upload / Setup</td>
+                        <td><svg class="cross-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></td>
+                        <td><svg class="cross-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></td>
+                        <td>30 Products Listed</td>
+                        <td>30 Products Listed</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-title">Multi-Vendor Integration</td>
+                        <td><svg class="cross-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></td>
+                        <td><svg class="cross-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></td>
+                        <td><svg class="cross-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></td>
+                        <td><svg class="check-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+                    </tr>
+                    <tr>
+                        <td class="feature-title">E-commerce Wallet & Auto Invoice</td>
+                        <td><svg class="cross-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></td>
+                        <td><svg class="cross-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></td>
+                        <td><svg class="check-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+                        <td><svg class="check-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+                    </tr>
+                    <tr>
+                        <td class="feature-title">24/7 Hosting Support</td>
+                        <td><svg class="check-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+                        <td><svg class="check-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+                        <td><svg class="check-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+                        <td><svg class="check-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <a href="index.html" class="logo">
+                    <img src="./assets/weblyrix_logo_full.svg" alt="Weblyrix Digital Solutions logo" />
+                </a>
+                <p>Transforming ideas into digital reality. Your trusted partner for premium tech solutions.</p>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/md-asjad-48a9042b4/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                    <a href="https://x.com/11mdasjad" aria-label="X" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/p/DWcWJ5IE2yr/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                    <a href="https://github.com/11mdasjad" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="index.html#services">Web Development</a></li>
+                    <li><a href="index.html#services">Mobile Apps</a></li>
+                    <li><a href="index.html#services">SEO Optimization</a></li>
+                    <li><a href="index.html#services">Architectural Design</a></li>
+                    <li><a href="index.html#services">UI/UX Design</a></li>
+                    <li><a href="index.html#services">Generative AI</a></li>
+                    <li><a href="index.html#services">Testing & QA</a></li>
+                    <li><a href="index.html#services">Machine Learning</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="index.html#team">Our Team</a></li>
+                    <li><a href="employee.html">Employees</a></li>
+                    <li><a href="index.html#portfolio">Featured Projects</a></li>
+                    <li><a href="pricing.html">Pricing Plans</a></li>
+                    <li><a href="index.html#contact">Get in Touch</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Weblyrix Digital Solutions. All Rights Reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Navbar Scrolled Transition
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Toggle Mobile Menu
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const toggle = document.querySelector('.mobile-toggle');
+            mobileMenu.classList.toggle('active');
+            toggle.classList.toggle('active');
+        }
+
+        // Switch Category Tabs
+        function switchCategory(category) {
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const grids = document.querySelectorAll('.plans-grid');
+            
+            // Toggle active buttons
+            tabBtns.forEach(btn => {
+                btn.classList.remove('active');
+                if (
+                    (category === 'web' && btn.innerText.includes('Web Design')) ||
+                    (category === 'ecomm' && btn.innerText.includes('E-Commerce'))
+                ) {
+                    btn.classList.add('active');
+                }
+            });
+
+            // Transition active grids
+            grids.forEach(grid => {
+                grid.style.opacity = '0';
+                grid.style.transform = 'translateY(15px)';
+                
+                setTimeout(() => {
+                    grid.classList.remove('active');
+                    
+                    if (category === 'web' && grid.id === 'categoryWeb') {
+                        grid.classList.add('active');
+                        setTimeout(() => {
+                            grid.style.opacity = '1';
+                            grid.style.transform = 'translateY(0)';
+                        }, 50);
+                    } else if (category === 'ecomm' && grid.id === 'categoryEcomm') {
+                        grid.classList.add('active');
+                        setTimeout(() => {
+                            grid.style.opacity = '1';
+                            grid.style.transform = 'translateY(0)';
+                        }, 50);
+                    }
+                }, 300);
+            });
+        }
+    </script>
+</body>
+</html>
