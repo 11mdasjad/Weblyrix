@@ -570,29 +570,31 @@
             transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        .code-window {
-            background: rgba(255, 255, 255, 0.72);
+        .hero-poster-container {
+            background: rgba(255, 255, 255, 0.7);
             border: 1.5px solid rgba(255, 255, 255, 0.6);
-            border-radius: 20px;
-            padding: 1.8rem;
-            backdrop-filter: blur(30px);
-            -webkit-backdrop-filter: blur(30px);
-            width: 100%;
-            max-width: 520px;
-            box-shadow: 0 30px 70px rgba(99, 102, 241, 0.12), 0 0 100px rgba(99, 102, 241, 0.04);
+            border-radius: 24px;
+            padding: 1.2rem;
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            box-shadow: 0 30px 70px rgba(99, 102, 241, 0.1), 0 0 100px rgba(99, 102, 241, 0.04);
             transform: translateZ(40px);
-            transform-style: preserve-3d;
             transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-            position: relative;
+            max-width: 530px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             overflow: hidden;
+            position: relative;
         }
 
-        /* Ambient spotlight tracking glow effect */
-        .code-window::after {
+        /* Ambient spotlight tracking glow effect on the hero poster */
+        .hero-poster-container::after {
             content: '';
             position: absolute;
             inset: 0;
-            border-radius: 20px;
+            border-radius: 24px;
             background: radial-gradient(circle 200px at var(--glow-x, 50%) var(--glow-y, 50%), rgba(99, 102, 241, 0.12), transparent 70%);
             pointer-events: none;
             opacity: 0;
@@ -600,75 +602,23 @@
             z-index: 2;
         }
 
-        .hero:hover .code-window::after {
+        .hero:hover .hero-poster-container::after {
             opacity: 1;
         }
 
-        .code-header {
-            display: flex;
-            gap: 8px;
-            margin-bottom: 1rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid var(--glass-border);
+        .hero-poster-img {
+            width: 100%;
+            height: auto;
+            border-radius: 16px;
+            display: block;
+            mix-blend-mode: multiply;
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
             position: relative;
-            z-index: 3;
+            z-index: 1;
         }
 
-        .code-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-        }
-
-        .code-dot.red {
-            background: #ff5f56;
-        }
-
-        .code-dot.yellow {
-            background: #ffbd2e;
-        }
-
-        .code-dot.green {
-            background: #6366f1;
-        }
-
-        .code-content {
-            font-family: 'Courier New', monospace;
-            font-size: 0.9rem;
-            line-height: 1.8;
-            position: relative;
-            z-index: 3;
-        }
-
-        .code-line {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .code-number {
-            color: var(--text-muted);
-            user-select: none;
-            min-width: 20px;
-        }
-
-        .code-text {
-            color: var(--text-secondary);
-        }
-
-        .code-text .keyword {
-            color: var(--accent-tertiary);
-        }
-
-        .code-text .function {
-            color: var(--accent-secondary);
-        }
-
-        .code-text .string {
-            color: var(--accent-primary);
-        }
-
-        .code-text .comment {
-            color: var(--text-muted);
+        .hero-poster-container:hover .hero-poster-img {
+            transform: scale(1.02);
         }
 
         .floating-cards {
@@ -4200,30 +4150,8 @@
                 </div>
             </div>
             <div class="hero-visual reveal">
-                <div class="code-window">
-                    <div class="code-header">
-                        <span class="code-dot red"></span>
-                        <span class="code-dot yellow"></span>
-                        <span class="code-dot green"></span>
-                    </div>
-                    <div class="code-content">
-                        <div class="code-line"><span class="code-number">1</span><span class="code-text"><span
-                                    class="keyword">const</span> <span class="function">createSuccess</span> = () =>
-                                {</span></div>
-                        <div class="code-line"><span class="code-number">2</span><span class="code-text"> <span
-                                    class="keyword">return</span> {</span></div>
-                        <div class="code-line"><span class="code-number">3</span><span class="code-text"> innovation:
-                                <span class="string">"unlimited"</span>,</span></div>
-                        <div class="code-line"><span class="code-number">4</span><span class="code-text"> quality: <span
-                                    class="string">"exceptional"</span>,</span></div>
-                        <div class="code-line"><span class="code-number">5</span><span class="code-text"> delivery:
-                                <span class="string">"on-time"</span></span></div>
-                        <div class="code-line"><span class="code-number">6</span><span class="code-text"> };</span>
-                        </div>
-                        <div class="code-line"><span class="code-number">7</span><span class="code-text">};</span></div>
-                        <div class="code-line"><span class="code-number">8</span><span class="code-text"><span
-                                    class="comment">// Let's build something amazing!</span></span></div>
-                    </div>
+                <div class="hero-poster-container">
+                    <img src="./assets/hero_illustration.png" alt="Futuristic Startup Growth & Technology Illustration" class="hero-poster-img" loading="lazy" decoding="async" />
                 </div>
                 <div class="floating-cards">
                     <div class="float-card float-card-1">
@@ -7164,9 +7092,9 @@
         // Interactive 3D tilt parallax effect and ambient spotlight tracker for Hero
         const heroVisual = document.querySelector('.hero-visual');
         const hero = document.getElementById('home');
-        const codeWindow = document.querySelector('.code-window');
+        const posterContainer = document.querySelector('.hero-poster-container');
 
-        if (hero && heroVisual && codeWindow) {
+        if (hero && heroVisual && posterContainer) {
             hero.addEventListener('mousemove', (e) => {
                 const rect = hero.getBoundingClientRect();
                 const x = e.clientX - rect.left - (rect.width / 2);
@@ -7178,13 +7106,13 @@
                 
                 heroVisual.style.transform = `perspective(1200px) rotateX(${degX}deg) rotateY(${degY}deg)`;
                 
-                // Track mouse inside the dashboard mockup card to move gradient spotlight
-                const winRect = codeWindow.getBoundingClientRect();
+                // Track mouse inside the poster mockup card to move gradient spotlight
+                const winRect = posterContainer.getBoundingClientRect();
                 const glowX = e.clientX - winRect.left;
                 const glowY = e.clientY - winRect.top;
                 
-                codeWindow.style.setProperty('--glow-x', `${glowX}px`);
-                codeWindow.style.setProperty('--glow-y', `${glowY}px`);
+                posterContainer.style.setProperty('--glow-x', `${glowX}px`);
+                posterContainer.style.setProperty('--glow-y', `${glowY}px`);
             });
             
             hero.addEventListener('mouseleave', () => {
