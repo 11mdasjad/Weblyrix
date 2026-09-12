@@ -667,18 +667,39 @@
         }
 
         @keyframes floatCard1 {
-            0%, 100% { transform: translateZ(90px) translateY(0) rotate(1deg); }
-            50% { transform: translateZ(90px) translateY(-14px) rotate(-1deg); }
+
+            0%,
+            100% {
+                transform: translateZ(90px) translateY(0) rotate(1deg);
+            }
+
+            50% {
+                transform: translateZ(90px) translateY(-14px) rotate(-1deg);
+            }
         }
 
         @keyframes floatCard2 {
-            0%, 100% { transform: translateZ(110px) translateY(0) rotate(-1.5deg); }
-            50% { transform: translateZ(110px) translateY(-20px) rotate(1.5deg); }
+
+            0%,
+            100% {
+                transform: translateZ(110px) translateY(0) rotate(-1.5deg);
+            }
+
+            50% {
+                transform: translateZ(110px) translateY(-20px) rotate(1.5deg);
+            }
         }
 
         @keyframes floatCard3 {
-            0%, 100% { transform: translateZ(135px) translateY(0) rotate(0.5deg); }
-            50% { transform: translateZ(135px) translateY(-16px) rotate(-1.5deg); }
+
+            0%,
+            100% {
+                transform: translateZ(135px) translateY(0) rotate(0.5deg);
+            }
+
+            50% {
+                transform: translateZ(135px) translateY(-16px) rotate(-1.5deg);
+            }
         }
 
         .float-card-icon {
@@ -1060,8 +1081,17 @@
         }
 
         .about-container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .about-container .founder-card {
+            flex: 1 1 380px;
+            max-width: 520px;
         }
 
         .founder-card {
@@ -4144,172 +4174,10 @@
             color: var(--text-primary);
         }
     </style>
-    
+
     <!-- Preconnect third-party dependency providers -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 
-    <!-- Rich Schema Markup for SEO / Generative Engine Optimization (GEO) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "ProfessionalService",
-          "@id": "https://weblyrix.in/#organization",
-          "name": "Weblyrix Digital Solutions",
-          "url": "https://weblyrix.in",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://weblyrix.in/assets/weblyrix_logo_full.svg",
-            "caption": "Weblyrix Digital Solutions Logo"
-          },
-          "image": "https://weblyrix.in/assets/weblyrix_logo_full.svg",
-          "description": "Premium futuristic AI startup and digital solutions agency delivering state-of-the-art web development, mobile apps, SEO, design, IT solutions, and custom generative AI integrations.",
-          "telephone": "+91 99057 57447",
-          "email": "info@weblyrix.in",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Noida",
-            "addressRegion": "Uttar Pradesh",
-            "addressCountry": "IN"
-          },
-          "founder": {
-            "@type": "Person",
-            "name": "Md Asjad",
-            "jobTitle": "Founder",
-            "sameAs": [
-              "https://www.linkedin.com/in/md-asjad-48a9042b4/",
-              "https://x.com/11mdasjad",
-              "https://github.com/11mdasjad"
-            ]
-          },
-          "member": [
-            {
-              "@type": "Person",
-              "name": "Amash Tahsin",
-              "jobTitle": "CEO",
-              "sameAs": [
-                "https://www.linkedin.com/in/amash-tahsin-636574383"
-              ]
-            },
-            {
-              "@type": "Person",
-              "name": "Md Mufti Habib",
-              "jobTitle": "CTO",
-              "sameAs": [
-                "https://www.linkedin.com/in/muftihabib/"
-              ]
-            },
-            {
-              "@type": "Person",
-              "name": "Faisal Khan",
-              "jobTitle": "CMO",
-              "sameAs": [
-                "https://www.linkedin.com/in/faisalkhan8935/"
-              ]
-            },
-            {
-              "@type": "Person",
-              "name": "Raquibuddin Ahmad",
-              "jobTitle": "Project Manager",
-              "sameAs": [
-                "https://www.linkedin.com/in/raquibuddin-ahmad-675802240/"
-              ]
-            },
-            {
-              "@type": "Person",
-              "name": "Md Chishti Habib",
-              "jobTitle": "Chief Information Security Officer (CISO)",
-              "sameAs": [
-                "https://www.linkedin.com/in/md-chishti-habib-194748262/"
-              ]
-            }
-          ],
-          "sameAs": [
-            "https://www.linkedin.com/in/md-asjad-48a9042b4/",
-            "https://x.com/11mdasjad",
-            "https://github.com/11mdasjad",
-            "https://www.instagram.com/weblyrix_digital_solution/"
-          ],
-          "areaServed": [
-            {
-              "@type": "Country",
-              "name": "India"
-            },
-            {
-              "@type": "Country",
-              "name": "United States"
-            },
-            {
-              "@type": "Country",
-              "name": "United Kingdom"
-            },
-            {
-              "@type": "Country",
-              "name": "United Arab Emirates"
-            }
-          ],
-          "knowsAbout": [
-            "Web Development",
-            "Mobile App Development",
-            "Artificial Intelligence",
-            "Generative AI",
-            "Cybersecurity",
-            "Architectural Design",
-            "Search Engine Optimization (SEO)",
-            "Generative Engine Optimization (GEO)"
-          ]
-        },
-        {
-          "@type": "WebSite",
-          "@id": "https://weblyrix.in/#website",
-          "url": "https://weblyrix.in",
-          "name": "Weblyrix Digital Solutions",
-          "publisher": {
-            "@id": "https://weblyrix.in/#organization"
-          }
-        },
-        {
-          "@type": "FAQPage",
-          "@id": "https://weblyrix.in/#faq",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "What makes Weblyrix's technical architecture futuristic and scalable?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "At Weblyrix Digital Solutions, we engineer applications using robust, industry-standard modern stacks. Our frontends leverage modern frameworks (like React and Next.js) alongside optimized native structures to secure ultra-fast Largest Contentful Paint (LCP) speeds and seamless routing. Backends are built on scalable Node.js architectures, secure serverless cloud APIs, and relational databases. Every project undergoes a strict performance and responsiveness pipeline to ensure it handles high-volume loads flawlessly."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How does Weblyrix ensure the security and privacy of client digital assets?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Security is baked into our development lifecycle, directed by our Chief Information Security Officer (CISO) Md Chishti Habib. We implement data-encryption protocols, secure authentication patterns (OAuth, JWT), and hardened Cloud Security Policies (CSP). We conduct rigorous vulnerability audits and penetration tests before any deployment, ensuring all smart contracts, user databases, and APIs remain completely airtight against security threats."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What comprehensive digital services does Weblyrix deliver?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "We operate as a premium, full-service digital solutions agency. Our core deliverables include: Full-Stack & Web Development, Mobile App Development, Generative AI & Machine Learning, Architectural Design Services (led by Ar. Shadaab Akhtar), SEO & Generative Engine Optimization (GEO), and IT Consulting & Cloud Solutions."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Where is Weblyrix based and what regions do you serve?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Our operational headquarters is in Noida, Uttar Pradesh, India. However, we serve a global client base. Our team leverages advanced remote collaboration tools and virtual staging ecosystems to deliver digital products, architectural design consultation, and custom software systems seamlessly to businesses across the United States, Europe, Asia, and the Middle East."
-              }
-            }
-          ]
-        }
-      ]
-    }
-    </script>
 </head>
 
 <body>
@@ -4427,7 +4295,8 @@
             </div>
             <div class="hero-visual reveal">
                 <div class="hero-poster-container">
-                    <img src="./assets/hero_illustration.png" alt="Futuristic Startup Growth & Technology Illustration" class="hero-poster-img" fetchpriority="high" decoding="sync" />
+                    <img src="./assets/hero_illustration.png" alt="Futuristic Startup Growth & Technology Illustration"
+                        class="hero-poster-img" fetchpriority="high" decoding="sync" />
                 </div>
                 <div class="floating-cards">
                     <div class="float-card float-card-1">
@@ -4839,7 +4708,7 @@
                             landing pages to complex portals — with guaranteed on-time delivery and lifetime hosting
                             support.</p>
                     </div>
-                    <a href="https://wa.me/919905757447?text=Hello%20Weblyrix!%20I%20am%20inquiring%20about%20Website%20Development%20services.%20Please%20provide%20more%20details."
+                    <a href="https://wa.me/916205293511?text=Hello%20Weblyrix!%20I%20am%20inquiring%20about%20Website%20Development%20services.%20Please%20provide%20more%20details."
                         class="btn btn-primary pane-cta" target="_blank" rel="noopener noreferrer">
                         <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
                             <path
@@ -4967,7 +4836,7 @@
                         <p>We build <strong>cross-platform mobile apps</strong> using Flutter and React Native that look
                             native, perform flawlessly, and scale effortlessly from Day 1.</p>
                     </div>
-                    <a href="https://wa.me/919905757447?text=Hello%20Weblyrix!%20I%20am%20inquiring%20about%20Mobile%20App%20Development%20services.%20Please%20provide%20more%20details."
+                    <a href="https://wa.me/916205293511?text=Hello%20Weblyrix!%20I%20am%20inquiring%20about%20Mobile%20App%20Development%20services.%20Please%20provide%20more%20details."
                         class="btn btn-primary pane-cta" target="_blank" rel="noopener noreferrer">
                         <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
                             <path
@@ -5099,7 +4968,7 @@
                             seamless payment gateways, intelligent product recommendations, and enterprise-grade
                             security.</p>
                     </div>
-                    <a href="https://wa.me/919905757447?text=Hello%20Weblyrix!%20I%20am%20inquiring%20about%20Custom%20E-Commerce%20services.%20Please%20provide%20more%20details."
+                    <a href="https://wa.me/916205293511?text=Hello%20Weblyrix!%20I%20am%20inquiring%20about%20Custom%20E-Commerce%20services.%20Please%20provide%20more%20details."
                         class="btn btn-primary pane-cta" target="_blank" rel="noopener noreferrer">
                         <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
                             <path
@@ -5232,7 +5101,7 @@
                         <p>Our <strong>data-driven digital marketing</strong> strategies increase your visibility,
                             generate quality leads, and maximize ROI across all digital channels.</p>
                     </div>
-                    <a href="https://wa.me/919905757447?text=Hello%20Weblyrix!%20I%20am%20inquiring%20about%20Digital%20Marketing%20services.%20Please%20provide%20more%20details."
+                    <a href="https://wa.me/916205293511?text=Hello%20Weblyrix!%20I%20am%20inquiring%20about%20Digital%20Marketing%20services.%20Please%20provide%20more%20details."
                         class="btn btn-primary pane-cta" target="_blank" rel="noopener noreferrer">
                         <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
                             <path
@@ -5359,7 +5228,7 @@
                         <p>From <strong>brand identity to stunning UI/UX</strong> — we create visually compelling
                             designs that communicate your message and leave a lasting impression on your audience.</p>
                     </div>
-                    <a href="https://wa.me/919905757447?text=Hello%20Weblyrix!%20I%20am%20inquiring%20about%20Graphic%20Designing%20services.%20Please%20provide%20more%20details."
+                    <a href="https://wa.me/916205293511?text=Hello%20Weblyrix!%20I%20am%20inquiring%20about%20Graphic%20Designing%20services.%20Please%20provide%20more%20details."
                         class="btn btn-primary pane-cta" target="_blank" rel="noopener noreferrer">
                         <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
                             <path
@@ -5489,7 +5358,7 @@
                             processes, centralize data, and give your team real-time visibility across all operations.
                         </p>
                     </div>
-                    <a href="https://wa.me/919905757447?text=Hello%20Weblyrix!%20I%20am%20inquiring%20about%20ERP%20%26%20CRM%20Systems%20services.%20Please%20provide%20more%20details."
+                    <a href="https://wa.me/916205293511?text=Hello%20Weblyrix!%20I%20am%20inquiring%20about%20ERP%20%26%20CRM%20Systems%20services.%20Please%20provide%20more%20details."
                         class="btn btn-primary pane-cta" target="_blank" rel="noopener noreferrer">
                         <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
                             <path
@@ -5617,7 +5486,7 @@
                         <p>Our <strong>end-to-end QA testing</strong> identifies bugs before they reach production —
                             ensuring flawless user experiences with automated pipelines and detailed reporting.</p>
                     </div>
-                    <a href="https://wa.me/919905757447?text=Hello%20Weblyrix!%20I%20am%20inquiring%20about%20Testing%20%26%20QA%20services.%20Please%20provide%20more%20details."
+                    <a href="https://wa.me/916205293511?text=Hello%20Weblyrix!%20I%20am%20inquiring%20about%20Testing%20%26%20QA%20services.%20Please%20provide%20more%20details."
                         class="btn btn-primary pane-cta" target="_blank" rel="noopener noreferrer">
                         <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
                             <path
@@ -5748,7 +5617,7 @@
                         <p>We engineer <strong>production-ready ML models</strong> — from data wrangling to deployment —
                             helping businesses automate decisions, predict trends, and unlock hidden insights.</p>
                     </div>
-                    <a href="https://wa.me/919905757447?text=Hello%20Weblyrix!%20I%20am%20inquiring%20about%20Machine%20Learning%20services.%20Please%20provide%20more%20details."
+                    <a href="https://wa.me/916205293511?text=Hello%20Weblyrix!%20I%20am%20inquiring%20about%20Machine%20Learning%20services.%20Please%20provide%20more%20details."
                         class="btn btn-primary pane-cta" target="_blank" rel="noopener noreferrer">
                         <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
                             <path
@@ -5879,7 +5748,7 @@
                         <p>We deliver <strong>scalable IT infrastructure</strong> on AWS, GCP, and Azure — with
                             containerized deployments, automated pipelines, and round-the-clock system monitoring.</p>
                     </div>
-                    <a href="https://wa.me/919905757447?text=Hello%20Weblyrix!%20I%20am%20inquiring%20about%20IT%20Solutions%20services.%20Please%20provide%20more%20details."
+                    <a href="https://wa.me/916205293511?text=Hello%20Weblyrix!%20I%20am%20inquiring%20about%20IT%20Solutions%20services.%20Please%20provide%20more%20details."
                         class="btn btn-primary pane-cta" target="_blank" rel="noopener noreferrer">
                         <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
                             <path
@@ -6018,7 +5887,7 @@
                             intelligent chatbots and document Q&amp;A to autonomous agent systems that work for you
                             24/7.</p>
                     </div>
-                    <a href="https://wa.me/919905757447?text=Hello%20Weblyrix!%20I%20am%20inquiring%20about%20Gen%20AI%20services.%20Please%20provide%20more%20details."
+                    <a href="https://wa.me/916205293511?text=Hello%20Weblyrix!%20I%20am%20inquiring%20about%20Gen%20AI%20services.%20Please%20provide%20more%20details."
                         class="btn btn-primary pane-cta" target="_blank" rel="noopener noreferrer">
                         <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
                             <path
@@ -6158,7 +6027,7 @@
                             photorealistic 3D renders — helping you visualize and build your dream space with
                             confidence.</p>
                     </div>
-                    <a href="https://wa.me/919905757447?text=Hello%20Weblyrix!%20I%20am%20inquiring%20about%20Architectural%20Design%20services.%20Please%20provide%20more%20details."
+                    <a href="https://wa.me/916205293511?text=Hello%20Weblyrix!%20I%20am%20inquiring%20about%20Architectural%20Design%20services.%20Please%20provide%20more%20details."
                         class="btn btn-primary pane-cta" target="_blank" rel="noopener noreferrer">
                         <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
                             <path
@@ -6512,6 +6381,18 @@
                     </a>
                 </div>
             </div>
+            <div class="founder-card reveal">
+                <div class="founder-avatar">
+                    <img src="./aaquib.png" alt="Md Aaquib " />
+                </div>
+                <h3 class="founder-name">Md Aaquib</h3>
+                <p class="founder-role"></p>
+                <p class="founder-bio">
+                    Responsible for supporting development, managing website operations, testing, and improving the user
+                    experience.
+                <div class="founder-social">
+                </div>
+            </div>
         </div>
     </section>
 
@@ -6642,16 +6523,20 @@
             </article>
             <article class="team-card reveal reveal-delay">
                 <div class="team-member-photo">
-                    <img src="./aaquib.png" alt="Md Aaquib, Database Administration at Weblyrix Digital Solutions"
-                        width="440" height="440" loading="lazy" decoding="async" />
+                    <svg viewBox="0 0 440 440" width="440" height="440" style="width:100%;height:100%;border-radius:50%;display:block;background:var(--bg-tertiary);">
+                        <rect width="440" height="440" fill="#e9edff" rx="220"/>
+                        <circle cx="220" cy="165" r="72" fill="#818cf8"/>
+                        <ellipse cx="220" cy="370" rx="120" ry="100" fill="#818cf8"/>
+                    </svg>
                 </div>
-                <h3 class="team-member-name">Md Aaquib</h3>
-                <p class="team-member-role">Database Administration</p>
+                <h3 class="team-member-name">Rakesh Singh</h3>
+                <p class="team-member-role">Database Administrative</p>
                 <p class="team-member-company">Weblyrix Digital Solutions</p>
-                <p class="team-member-bio">Overseeing database architecture, optimization, and backend data operations to ensure scalable, secure, and high-performance data infrastructure across all Weblyrix projects.</p>
+                <p class="team-member-bio">Managing database systems, ensuring data integrity, and optimizing backend infrastructure to support reliable and efficient operations across all Weblyrix projects.</p>
                 <div class="team-social">
                 </div>
             </article>
+
         </div>
     </section>
 
@@ -6921,59 +6806,80 @@
     <section class="faq" id="faq">
         <div class="section-header reveal">
             <span class="section-badge">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="10"/>
-                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
-                    <line x1="12" y1="17" x2="12.01" y2="17"/>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                    <line x1="12" y1="17" x2="12.01" y2="17" />
                 </svg>
                 FAQ
             </span>
             <h2 class="section-title">Frequently Asked Questions</h2>
-            <p class="section-subtitle">Get direct answers to common questions about our technical operations, AI integration, and project execution.</p>
+            <p class="section-subtitle">Get direct answers to common questions about our technical operations, AI
+                integration, and project execution.</p>
         </div>
-        
+
         <div class="faq-container reveal">
             <div class="faq-grid">
                 <details class="faq-card" name="faq-accordion">
                     <summary class="faq-question">
                         <span>What makes Weblyrix's technical architecture futuristic and scalable?</span>
-                        <svg class="faq-chevron" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg class="faq-chevron" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor"
+                            stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="6 9 12 15 18 9"></polyline>
                         </svg>
                     </summary>
                     <div class="faq-answer">
-                        <p>At Weblyrix Digital Solutions, we engineer applications using robust, industry-standard modern stacks. Our frontends leverage modern frameworks (like React and Next.js) alongside optimized native structures to secure ultra-fast Largest Contentful Paint (LCP) speeds and seamless routing. Backends are built on scalable Node.js architectures, secure serverless cloud APIs, and relational databases. Every project undergoes a strict performance and responsiveness pipeline to ensure it handles high-volume loads flawlessly.</p>
+                        <p>At Weblyrix Digital Solutions, we engineer applications using robust, industry-standard
+                            modern stacks. Our frontends leverage modern frameworks (like React and Next.js) alongside
+                            optimized native structures to secure ultra-fast Largest Contentful Paint (LCP) speeds and
+                            seamless routing. Backends are built on scalable Node.js architectures, secure serverless
+                            cloud APIs, and relational databases. Every project undergoes a strict performance and
+                            responsiveness pipeline to ensure it handles high-volume loads flawlessly.</p>
                     </div>
                 </details>
 
                 <details class="faq-card" name="faq-accordion">
                     <summary class="faq-question">
                         <span>How does Weblyrix ensure the security and privacy of client digital assets?</span>
-                        <svg class="faq-chevron" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg class="faq-chevron" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor"
+                            stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="6 9 12 15 18 9"></polyline>
                         </svg>
                     </summary>
                     <div class="faq-answer">
-                        <p>Security is baked into our development lifecycle, directed by our Chief Information Security Officer (CISO) Md Chishti Habib. We implement data-encryption protocols, secure authentication patterns (OAuth, JWT), and hardened Cloud Security Policies (CSP). We conduct rigorous vulnerability audits and penetration tests before any deployment, ensuring all smart contracts, user databases, and APIs remain completely airtight against security threats.</p>
+                        <p>Security is baked into our development lifecycle, directed by our Chief Information Security
+                            Officer (CISO) Md Chishti Habib. We implement data-encryption protocols, secure
+                            authentication patterns (OAuth, JWT), and hardened Cloud Security Policies (CSP). We conduct
+                            rigorous vulnerability audits and penetration tests before any deployment, ensuring all
+                            smart contracts, user databases, and APIs remain completely airtight against security
+                            threats.</p>
                     </div>
                 </details>
 
                 <details class="faq-card" name="faq-accordion">
                     <summary class="faq-question">
                         <span>What comprehensive digital services does Weblyrix deliver?</span>
-                        <svg class="faq-chevron" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg class="faq-chevron" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor"
+                            stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="6 9 12 15 18 9"></polyline>
                         </svg>
                     </summary>
                     <div class="faq-answer">
-                        <p>We operate as a premium, full-service digital solutions agency. Our core deliverables include:
+                        <p>We operate as a premium, full-service digital solutions agency. Our core deliverables
+                            include:
                         <ul>
-                            <li><strong>Full-Stack & Web Development:</strong> High-performance websites, custom SaaS, and portals.</li>
+                            <li><strong>Full-Stack & Web Development:</strong> High-performance websites, custom SaaS,
+                                and portals.</li>
                             <li><strong>Mobile App Development:</strong> Responsive iOS & Android solutions.</li>
-                            <li><strong>Generative AI & Machine Learning:</strong> Custom LLM tuning, AI agents, and workflows.</li>
-                            <li><strong>Architectural Design Services:</strong> Functional, sustainable structural designs led by our architect, Ar. Shadaab Akhtar.</li>
-                            <li><strong>SEO & Generative Engine Optimization (GEO):</strong> Elevating brands to be cited and recommended in search queries and AI engines.</li>
-                            <li><strong>IT Consulting & Cloud Solutions:</strong> Scalable server and network setups.</li>
+                            <li><strong>Generative AI & Machine Learning:</strong> Custom LLM tuning, AI agents, and
+                                workflows.</li>
+                            <li><strong>Architectural Design Services:</strong> Functional, sustainable structural
+                                designs led by our architect, Ar. Shadaab Akhtar.</li>
+                            <li><strong>SEO & Generative Engine Optimization (GEO):</strong> Elevating brands to be
+                                cited and recommended in search queries and AI engines.</li>
+                            <li><strong>IT Consulting & Cloud Solutions:</strong> Scalable server and network setups.
+                            </li>
                         </ul>
                         </p>
                     </div>
@@ -6982,12 +6888,17 @@
                 <details class="faq-card" name="faq-accordion">
                     <summary class="faq-question">
                         <span>Where is Weblyrix based and what regions do you serve?</span>
-                        <svg class="faq-chevron" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg class="faq-chevron" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor"
+                            stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="6 9 12 15 18 9"></polyline>
                         </svg>
                     </summary>
                     <div class="faq-answer">
-                        <p>Our operational headquarters is in Noida, Uttar Pradesh, India. However, we serve a global client base. Our team leverages advanced remote collaboration tools and virtual staging ecosystems to deliver digital products, architectural design consultation, and custom software systems seamlessly to businesses across the United States, Europe, Asia, and the Middle East.</p>
+                        <p>Our operational headquarters is in Noida, Uttar Pradesh, India. However, we serve a global
+                            client base. Our team leverages advanced remote collaboration tools and virtual staging
+                            ecosystems to deliver digital products, architectural design consultation, and custom
+                            software systems seamlessly to businesses across the United States, Europe, Asia, and the
+                            Middle East.</p>
                     </div>
                 </details>
             </div>
@@ -7037,7 +6948,7 @@
                         </div>
                         <div class="contact-method-text">
                             <h4>Call Us</h4>
-                            <p>+91 99057 57447</p>
+                            <p>+91 62052 93511</p>
                         </div>
                     </div>
 
@@ -7055,7 +6966,7 @@
                     </div>
                 </div>
 
-                <a href="https://wa.me/919905757447" class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/916205293511?text=Hello%20Weblyrix!%20I%20would%20like%20to%20discuss%20a%20project.%20Please%20provide%20more%20details." class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
                     <svg viewBox="0 0 24 24">
                         <path
                             d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
@@ -7141,18 +7052,21 @@
                     <a href="#" class="logo">
                         <img src="./assets/weblyrix_logo_full.svg" alt="Weblyrix Digital Solutions logo" />
                     </a>
-                    <p>Transforming ideas into digital reality. Your trusted partner for premium, cutting-edge technology and digital strategy.</p>
-                    
+                    <p>Transforming ideas into digital reality. Your trusted partner for premium, cutting-edge
+                        technology and digital strategy.</p>
+
                     <div style="margin-top: 1.5rem;">
                         <div class="footer-contact-item">
                             <svg viewBox="0 0 24 24">
-                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                <path
+                                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
                             </svg>
                             <span>info@weblyrix.com</span>
                         </div>
                         <div class="footer-contact-item">
                             <svg viewBox="0 0 24 24">
-                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                <path
+                                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                             </svg>
                             <span>Noida, Uttar Pradesh, India</span>
                         </div>
@@ -7219,21 +7133,25 @@
 
                 <div class="footer-newsletter">
                     <h4>Newsletter</h4>
-                    <p>Subscribe to our newsletter to receive the latest updates, design articles, and tech insights.</p>
+                    <p>Subscribe to our newsletter to receive the latest updates, design articles, and tech insights.
+                    </p>
                     <form class="newsletter-form" id="newsletterForm" onsubmit="handleSubscribe(event)">
                         <div class="newsletter-input-wrapper">
-                            <input type="email" class="newsletter-input" placeholder="Enter your email" required aria-label="Email Address" />
+                            <input type="email" class="newsletter-input" placeholder="Enter your email" required
+                                aria-label="Email Address" />
                         </div>
                         <button type="submit" class="newsletter-btn">
                             Subscribe
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                                 <line x1="22" y1="2" x2="11" y2="13"></line>
                                 <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
                             </svg>
                         </button>
                     </form>
                     <div class="newsletter-success" id="newsletterSuccess">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="20 6 9 17 4 12"></polyline>
                         </svg>
                         <span>Successfully Subscribed!</span>
@@ -7259,19 +7177,19 @@
             const canvas = document.getElementById(canvasId);
             if (!canvas) return;
             const ctx = canvas.getContext('2d');
-            
+
             let width = 0;
             let height = 0;
             let points = [];
             let animationFrameId = null;
             let time = 0;
-            
+
             // Dynamic mouse-coordinate interpolators
             let mouseX = 0;
             let mouseY = 0;
             let targetMouseX = 0;
             let targetMouseY = 0;
-            
+
             const parentSection = canvas.parentElement;
             if (parentSection) {
                 parentSection.addEventListener('mousemove', (e) => {
@@ -7284,97 +7202,97 @@
                     targetMouseY = 0;
                 });
             }
-            
+
             function resize() {
                 const rect = parentSection ? parentSection.getBoundingClientRect() : { width: window.innerWidth, height: window.innerHeight };
                 const dpr = window.devicePixelRatio || 1;
-                
+
                 width = rect.width;
                 height = rect.height;
-                
+
                 // Set internal buffer size scaled by devicePixelRatio for high-DPI crispness
                 canvas.width = width * dpr;
                 canvas.height = height * dpr;
-                
+
                 // Scale context to keep drawing coordinates consistent
                 ctx.scale(dpr, dpr);
-                
+
                 // Set CSS style size to match element rect
                 canvas.style.width = width + 'px';
                 canvas.style.height = height + 'px';
-                
+
                 initPoints();
             }
-            
+
             function initPoints() {
                 points = [];
                 for (let r = 0; r < rowCount; r++) {
                     for (let c = 0; c < colCount; c++) {
                         const x = (c - colCount / 2) * dotSpacing;
                         const z = (r - rowCount / 2) * dotSpacing;
-                        
+
                         // Calculate edge fade factor: reaches exactly 0 at borders, 1 in center
                         const rowFactor = Math.sin((r / (rowCount - 1)) * Math.PI);
                         const colFactor = Math.sin((c / (colCount - 1)) * Math.PI);
                         const edgeFade = rowFactor * colFactor;
-                        
+
                         points.push({ x, y: 0, z, baseZ: z, edgeFade });
                     }
                 }
             }
-            
+
             function draw() {
                 ctx.clearRect(0, 0, width, height);
                 time += 0.012;
-                
+
                 // Elastic mouse coordinate tracking
                 mouseX += (targetMouseX - mouseX) * 0.06;
                 mouseY += (targetMouseY - mouseY) * 0.06;
-                
+
                 // Rotational angle computations (pitch and yaw limits)
-                const angleX = (mouseY / height) * 0.25 + 0.58; 
-                const angleY = (mouseX / width) * 0.25 - time * 0.06; 
-                
+                const angleX = (mouseY / height) * 0.25 + 0.58;
+                const angleY = (mouseX / width) * 0.25 - time * 0.06;
+
                 const cosX = Math.cos(angleX);
                 const sinX = Math.sin(angleX);
                 const cosY = Math.cos(angleY);
                 const sinY = Math.sin(angleY);
-                
+
                 const perspective = 520;
                 const centerX = width / 2;
                 const centerY = height / 2 + 10;
                 const projected = [];
-                
+
                 points.forEach((p) => {
                     // 1. undulation elevations computed using trigonometric radial scaling
                     const dist = Math.sqrt(p.x * p.x + p.z * p.z);
                     const y = Math.sin(dist * 0.012 - time * 2.8) * 32;
-                    
+
                     // 2. Yaw (Rotation around Y)
                     let rx1 = p.x * cosY - p.z * sinY;
                     let rz1 = p.x * sinY + p.z * cosY;
-                    
+
                     // 3. Pitch (Rotation around X)
                     let ry2 = y * cosX - rz1 * sinX;
                     let rz2 = y * sinX + rz1 * cosX;
-                    
-                    const zOffset = 420; 
+
+                    const zOffset = 420;
                     const totalZ = rz2 + zOffset;
-                    
+
                     if (totalZ > 50) {
                         const scale = perspective / totalZ;
                         const sx = rx1 * scale + centerX;
                         const sy = ry2 * scale + centerY;
-                        
+
                         // Combine depth fade (scale) and our coordinate-based organic edgeFade
                         const alpha = Math.min(1, (scale * 0.85)) * p.edgeFade;
-                        
+
                         projected.push({ x: sx, y: sy, alpha, z: totalZ });
                     } else {
                         projected.push(null);
                     }
                 });
-                
+
                 // Draw 3D wireframe mesh grid lines
                 ctx.lineWidth = 0.85;
                 for (let r = 0; r < rowCount; r++) {
@@ -7382,7 +7300,7 @@
                         const idx = r * colCount + c;
                         const p1 = projected[idx];
                         if (!p1) continue;
-                        
+
                         if (c < colCount - 1) {
                             const p2 = projected[idx + 1];
                             if (p2) {
@@ -7394,7 +7312,7 @@
                                 ctx.stroke();
                             }
                         }
-                        
+
                         if (r < rowCount - 1) {
                             const p2 = projected[idx + colCount];
                             if (p2) {
@@ -7408,18 +7326,18 @@
                         }
                     }
                 }
-                
+
                 // Draw nodes/particles
                 for (let i = 0; i < projected.length; i++) {
                     const p = projected[i];
                     if (!p) continue;
-                    
+
                     const radius = Math.max(1, (300 / p.z) * 1.6);
                     ctx.fillStyle = `rgba(${particleColor}, ${p.alpha * 0.65})`;
                     ctx.beginPath();
                     ctx.arc(p.x, p.y, radius, 0, Math.PI * 2);
                     ctx.fill();
-                    
+
                     if (radius > 2.2) {
                         ctx.fillStyle = `rgba(${particleColor}, ${p.alpha * 0.12})`;
                         ctx.beginPath();
@@ -7427,10 +7345,10 @@
                         ctx.fill();
                     }
                 }
-                
+
                 animationFrameId = requestAnimationFrame(draw);
             }
-            
+
             window.addEventListener('resize', resize);
             resize();
             draw();
@@ -7464,27 +7382,27 @@
                 const rect = hero.getBoundingClientRect();
                 const x = e.clientX - rect.left - (rect.width / 2);
                 const y = e.clientY - rect.top - (rect.height / 2);
-                
+
                 // Limit maximum tilt to 12 degrees
                 const degX = -(y / (rect.height / 2)) * 12;
                 const degY = (x / (rect.width / 2)) * 12;
-                
+
                 heroVisual.style.transform = `perspective(1200px) rotateX(${degX}deg) rotateY(${degY}deg)`;
-                
+
                 // Track mouse inside the poster mockup card to move gradient spotlight
                 const winRect = posterContainer.getBoundingClientRect();
                 const glowX = e.clientX - winRect.left;
                 const glowY = e.clientY - winRect.top;
-                
+
                 posterContainer.style.setProperty('--glow-x', `${glowX}px`);
                 posterContainer.style.setProperty('--glow-y', `${glowY}px`);
             });
-            
+
             hero.addEventListener('mouseleave', () => {
                 heroVisual.style.transform = `perspective(1200px) rotateX(0deg) rotateY(0deg)`;
                 heroVisual.style.transition = 'transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
             });
-            
+
             hero.addEventListener('mouseenter', () => {
                 heroVisual.style.transition = 'none';
             });
